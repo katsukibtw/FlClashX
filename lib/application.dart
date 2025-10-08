@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flclashx/clash/clash.dart';
@@ -152,11 +153,25 @@ class ApplicationState extends ConsumerState<Application> {
                 GlobalWidgetsLocalizations.delegate
               ],
               builder: (_, child) {
-                return AppEnvManager(
+                Widget app = AppEnvManager(
                   child: _buildPlatformApp(
                     _buildApp(child!),
                   ),
                 );
+
+                if (Platform.isMacOS) {
+                  return FittedBox(
+                    fit: BoxFit.contain,
+                    alignment: Alignment.topCenter,
+                    child: SizedBox(
+                      width: 500,
+                      height: 800,
+                      child: app,
+                    ),
+                  );
+                }
+
+                return app;
               },
               scrollBehavior: BaseScrollBehavior(),
               title: appName,

@@ -19,8 +19,6 @@ final viewWidthProvider = AutoDisposeProvider<double>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ViewWidthRef = AutoDisposeProviderRef<double>;
 String _$viewModeHash() => r'736e2acc7e7d98ee30132de1990bf85f9506b47a';
 
@@ -35,8 +33,6 @@ final viewModeProvider = AutoDisposeProvider<ViewMode>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ViewModeRef = AutoDisposeProviderRef<ViewMode>;
 String _$isMobileViewHash() => r'554c9ed269a02af001e623e596622e2bb2d658e7';
 
@@ -51,8 +47,6 @@ final isMobileViewProvider = AutoDisposeProvider<bool>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef IsMobileViewRef = AutoDisposeProviderRef<bool>;
 String _$viewHeightHash() => r'410aee5b41388226ab16737f0e85a56f7e9fe801';
 
@@ -67,8 +61,6 @@ final viewHeightProvider = AutoDisposeProvider<double>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ViewHeightRef = AutoDisposeProviderRef<double>;
 String _$realTunEnableHash() => r'a4e995c86deca4c8307966470e69d93d64a40df6';
 
@@ -367,4 +359,4 @@ final proxiesQueryProvider =
 
 typedef _$ProxiesQuery = AutoDisposeNotifier<String>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

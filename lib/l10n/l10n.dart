@@ -28,10 +28,9 @@ class AppLocalizations {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<AppLocalizations> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -74,44 +73,57 @@ class AppLocalizations {
   String get dashboard {
     return Intl.message('Dashboard', name: 'dashboard', desc: '', args: []);
   }
-  
+
   /// `HWID sender`
   String get settingsSendDeviceDataTitle {
-  return Intl.message('Send device data', name: 'settingsSendDeviceDataTitle');
+    return Intl.message('Send device data',
+        name: 'settingsSendDeviceDataTitle');
   }
+
   String get settingsSendDeviceDataSubtitle {
-  return Intl.message('Includes sending HWID, model, and OS version', name: 'settingsSendDeviceDataSubtitle');
+    return Intl.message('Includes sending HWID, model, and OS version',
+        name: 'settingsSendDeviceDataSubtitle');
   }
 
   /// `Proxies`
   String get proxies {
     return Intl.message('Proxies', name: 'proxies', desc: '', args: []);
   }
+
   /// `Thanks`
   String get thanks {
     return Intl.message('Special Thanks', name: 'thanks', desc: '', args: []);
   }
+
   /// `Profile`
   String get profile {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
+
   /// `Success add profile`
   String get profileAddedSuccess {
-    return Intl.message('Success add profile', name: 'profileAddedSuccess', desc: '', args: []);
+    return Intl.message('Success add profile',
+        name: 'profileAddedSuccess', desc: '', args: []);
   }
+
   /// `Original Repository`
   String get originalRepository {
-  return Intl.message('Original Repository', name: 'originalRepository', desc: '', args: []);
+    return Intl.message('Original Repository',
+        name: 'originalRepository', desc: '', args: []);
   }
+
   /// `Profiles`
   String get profiles {
     return Intl.message('Profiles', name: 'profiles', desc: '', args: []);
   }
+
   String get remaining {
-  return Intl.message('Remaining', name: 'remaining');
+    return Intl.message('Remaining', name: 'remaining');
   }
+
   String get daysUntilExpirationShort {
-    return Intl.message('Days until expiration', name: 'daysUntilExpirationShort');
+    return Intl.message('Days until expiration',
+        name: 'daysUntilExpirationShort');
   }
 
   /// `Tools`
@@ -378,6 +390,7 @@ class AppLocalizations {
       args: [],
     );
   }
+
   /// `Add Profile`
   String get addProfile {
     return Intl.message(
@@ -385,6 +398,7 @@ class AppLocalizations {
       name: 'addProfile',
     );
   }
+
   /// `QR code not found in the image`
   String get qrNotFound {
     return Intl.message(
@@ -392,6 +406,7 @@ class AppLocalizations {
       name: 'qrNotFound',
     );
   }
+
   /// `SilentLaunch`
   String get silentLaunch {
     return Intl.message(
@@ -1641,39 +1656,57 @@ class AppLocalizations {
       args: [],
     );
   }
+
   String get addFromPhoneTitle {
-  return Intl.message('Add from Phone', name: 'addFromPhoneTitle');
+    return Intl.message('Add from Phone', name: 'addFromPhoneTitle');
   }
+
   String get addFromPhoneSubtitle {
-    return Intl.message('Show the QR code on your phone to scan', name: 'addFromPhoneSubtitle');
+    return Intl.message('Show the QR code on your phone to scan',
+        name: 'addFromPhoneSubtitle');
   }
+
   String get sendToTv {
     return Intl.message('Send to TV', name: 'sendToTv');
   }
+
   String get receiveSubscriptionTitle {
-    return Intl.message('Receive Subscription from Phone', name: 'receiveSubscriptionTitle');
+    return Intl.message('Receive Subscription from Phone',
+        name: 'receiveSubscriptionTitle');
   }
+
   String get receiveSubscriptionButton {
-    return Intl.message('Receive from Phone', name: 'receiveSubscriptionButton');
+    return Intl.message('Receive from Phone',
+        name: 'receiveSubscriptionButton');
   }
+
   String get receiveSubscriptionSubtitle {
-    return Intl.message('Show the QR code on your phone to scan', name: 'receiveSubscriptionSubtitle');
+    return Intl.message('Show the QR code on your phone to scan',
+        name: 'receiveSubscriptionSubtitle');
   }
+
   String get sendToTvTitle {
     return Intl.message('Send to TV', name: 'sendToTvTitle');
   }
+
   String get successTitle {
     return Intl.message('Success', name: 'successTitle');
   }
+
   String get errorTitle {
     return Intl.message('Error', name: 'errorTitle');
   }
+
   String get sentSuccessfullyMessage {
-    return Intl.message('Subscription sent to TV successfully.', name: 'sentSuccessfullyMessage');
+    return Intl.message('Subscription sent to TV successfully.',
+        name: 'sentSuccessfullyMessage');
   }
+
   String get invalidQrMessage {
-    return Intl.message('Invalid QR code or failed to send data.', name: 'invalidQrMessage');
+    return Intl.message('Invalid QR code or failed to send data.',
+        name: 'invalidQrMessage');
   }
+
   /// `Select`
   String get selectProfile {
     return Intl.message(
@@ -1681,6 +1714,7 @@ class AppLocalizations {
       name: 'selectProfile',
     );
   }
+
   /// `Auto close connections`
   String get autoCloseConnections {
     return Intl.message(
@@ -1690,6 +1724,7 @@ class AppLocalizations {
       args: [],
     );
   }
+
   /// `Support`
   String get support {
     return Intl.message(
@@ -1697,6 +1732,7 @@ class AppLocalizations {
       name: 'support',
     );
   }
+
   /// `Your subscription expires on {date}`
   String subscriptionExpiresOn(Object date) {
     return Intl.message(
@@ -1705,15 +1741,16 @@ class AppLocalizations {
       args: [date],
     );
   }
-    /// `Updated:`
-    String get updated {
-      return Intl.message(
-        'Updated:',
-        name: 'updated',
-      );
-    }
 
-    /// `Traffic:`
+  /// `Updated:`
+  String get updated {
+    return Intl.message(
+      'Updated:',
+      name: 'updated',
+    );
+  }
+
+  /// `Traffic:`
   String get traffic {
     return Intl.message(
       'Traffic:',
@@ -1728,6 +1765,7 @@ class AppLocalizations {
       name: 'expiresOn',
     );
   }
+
   /// `Paste from Clipboard`
   String get pasteFromClipboard {
     return Intl.message(
@@ -1802,7 +1840,7 @@ class AppLocalizations {
   String get remote {
     return Intl.message('Remote', name: 'remote', desc: '', args: []);
   }
-  
+
   /// `Your subscription is unlimited`
   String get subscriptionUnlimited {
     return Intl.message(
@@ -1810,6 +1848,7 @@ class AppLocalizations {
       name: 'subscriptionUnlimited',
     );
   }
+
   /// `Your subscription is perpetual`
   String get subscriptionEternal {
     return Intl.message(
@@ -1869,7 +1908,7 @@ class AppLocalizations {
       args: [],
     );
   }
-  
+
   /// `Backup local data to WebDAV`
   String get remoteBackupDesc {
     return Intl.message(
@@ -3325,6 +3364,16 @@ class AppLocalizations {
     return Intl.message(
       'Auto set system DNS',
       name: 'autoSetSystemDns',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Server`
+  String get changeServer {
+    return Intl.message(
+      'Change Server',
+      name: 'changeServer',
       desc: '',
       args: [],
     );

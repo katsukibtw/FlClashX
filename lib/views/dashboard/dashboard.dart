@@ -45,7 +45,7 @@ class _DashboardViewState extends ConsumerState<DashboardView> with PageMixin {
   }
 
   @override
-  Widget? get floatingActionButton => const StartButton();
+  Widget? get floatingActionButton => null; // Moved to bottom of body
 
   Widget _buildIsEdit(_IsEditWidgetBuilder builder) {
     return ValueListenableBuilder(
@@ -56,52 +56,51 @@ class _DashboardViewState extends ConsumerState<DashboardView> with PageMixin {
     );
   }
 
- @override
+  @override
   List<Widget> get actions => [
-      _buildIsEdit((isEdit) {
-        return isEdit
-            ? ValueListenableBuilder(
-                valueListenable: _addedWidgetsNotifier,
-                builder: (_, addedChildren, child) {
-                  if (addedChildren.isEmpty) {
-                    return Container();
-                  }
-                  return child!;
-                },
-                child: IconButton(
-                  onPressed: () {
-                    _showAddWidgetsModal();
+        _buildIsEdit((isEdit) {
+          return isEdit
+              ? ValueListenableBuilder(
+                  valueListenable: _addedWidgetsNotifier,
+                  builder: (_, addedChildren, child) {
+                    if (addedChildren.isEmpty) {
+                      return Container();
+                    }
+                    return child!;
                   },
-                  icon: const Icon(
-                    Icons.add_circle,
+                  child: IconButton(
+                    onPressed: () {
+                      _showAddWidgetsModal();
+                    },
+                    icon: const Icon(
+                      Icons.add_circle,
+                    ),
                   ),
-                ),
-              )
-            : const SizedBox();
-      }),
-      Consumer(
-        builder: (context, ref, child) {
-          final denyEditing = ref.watch(
-            currentProfileProvider.select((profile) => profile?.denyWidgetEditing)
-          );
+                )
+              : const SizedBox();
+        }),
+        Consumer(
+          builder: (context, ref, child) {
+            final denyEditing = ref.watch(currentProfileProvider
+                .select((profile) => profile?.denyWidgetEditing));
 
-          if (denyEditing == true) {
-            return const SizedBox.shrink();
-          }
+            if (denyEditing == true) {
+              return const SizedBox.shrink();
+            }
 
-          return IconButton(
-            icon: _buildIsEdit((isEdit) {
-              return isEdit
-                  ? const Icon(Icons.save)
-                  : const Icon(
-                      Icons.edit,
-                    );
-            }),
-            onPressed: _handleUpdateIsEdit,
-          );
-        },
-      ),
-    ];
+            return IconButton(
+              icon: _buildIsEdit((isEdit) {
+                return isEdit
+                    ? const Icon(Icons.save)
+                    : const Icon(
+                        Icons.edit,
+                      );
+              }),
+              onPressed: _handleUpdateIsEdit,
+            );
+          },
+        ),
+      ];
 
   _showAddWidgetsModal() {
     showSheet(
@@ -178,49 +177,58 @@ class _DashboardViewState extends ConsumerState<DashboardView> with PageMixin {
           .map((item) => item.widget)
           .toList();
     });
-    return Align(
-      alignment: Alignment.topCenter,
-      child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16).copyWith(
-            bottom: 88,
-          ),
-          child: _buildIsEdit((isEdit) {
-            return isEdit
-                ? SystemBackBlock(
-                    child: CommonPopScope(
-                      child: SuperGrid(
-                        key: key,
+    return Column(
+      children: [
+        Expanded(
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(16).copyWith(
+                bottom: 16,
+              ),
+              child: _buildIsEdit((isEdit) {
+                return isEdit
+                    ? SystemBackBlock(
+                        child: CommonPopScope(
+                          child: SuperGrid(
+                            key: key,
+                            crossAxisCount: columns,
+                            crossAxisSpacing: spacing,
+                            mainAxisSpacing: spacing,
+                            children: [
+                              ...dashboardState.dashboardWidgets
+                                  .where(
+                                    (item) => item.platforms.contains(
+                                      SupportPlatform.currentPlatform,
+                                    ),
+                                  )
+                                  .map(
+                                    (item) => item.widget,
+                                  ),
+                            ],
+                            onUpdate: () {
+                              _handleSave();
+                            },
+                          ),
+                          onPop: () {
+                            _handleUpdateIsEdit();
+                            return false;
+                          },
+                        ),
+                      )
+                    : Grid(
                         crossAxisCount: columns,
                         crossAxisSpacing: spacing,
                         mainAxisSpacing: spacing,
-                        children: [
-                          ...dashboardState.dashboardWidgets
-                              .where(
-                                (item) => item.platforms.contains(
-                                  SupportPlatform.currentPlatform,
-                                ),
-                              )
-                              .map(
-                                (item) => item.widget,
-                              ),
-                        ],
-                        onUpdate: () {
-                          _handleSave();
-                        },
-                      ),
-                      onPop: () {
-                        _handleUpdateIsEdit();
-                        return false;
-                      },
-                    ),
-                  )
-                : Grid(
-                    crossAxisCount: columns,
-                    crossAxisSpacing: spacing,
-                    mainAxisSpacing: spacing,
-                    children: children,
-                  );
-          })),
+                        children: children,
+                      );
+              }),
+            ),
+          ),
+        ),
+        // Start/Stop button at the bottom
+        const StartButton(),
+      ],
     );
   }
 }
@@ -238,7 +246,7 @@ class _AddDashboardWidgetModal extends StatelessWidget {
   Widget build(BuildContext context) {
     return DeferredPointerHandler(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           16,
         ),
         child: Grid(
@@ -316,9 +324,9 @@ class _AddedContainerState extends State<_AddedContainer> {
               height: 24,
               child: IconButton.filled(
                 iconSize: 20,
-                padding: EdgeInsets.all(2),
+                padding: const EdgeInsets.all(2),
                 onPressed: _handleAdd,
-                icon: Icon(
+                icon: const Icon(
                   Icons.add,
                 ),
               ),

@@ -17,6 +17,7 @@ double getItemHeight(ProxyCardType proxyCardType) {
     ProxyCardType.expand => baseHeight + measure.labelSmallHeight + 6,
     ProxyCardType.shrink => baseHeight,
     ProxyCardType.min => baseHeight - measure.bodyMediumHeight,
+    ProxyCardType.oneline => 16 + measure.bodyMediumHeight + 4,
   };
 }
 

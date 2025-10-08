@@ -5,3 +5,5 @@ export 'outbound_mode.dart';
 export 'quick_options.dart';
 export 'traffic_usage.dart';
 export 'memory_info.dart';
+export 'change_server_button.dart';
+export 'service_info_widget.dart';

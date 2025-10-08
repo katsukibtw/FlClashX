@@ -257,11 +257,11 @@ class TrafficValueShow {
 
 @freezed
 class Proxy with _$Proxy {
-  const factory Proxy({
-    required String name,
-    required String type,
-    String? now,
-  }) = _Proxy;
+  const factory Proxy(
+      {required String name,
+      required String type,
+      String? now,
+      String? serverDescription}) = _Proxy;
 
   factory Proxy.fromJson(Map<String, Object?> json) => _$ProxyFromJson(json);
 }
@@ -382,7 +382,7 @@ extension ColorSchemesExt on ColorSchemes {
               dynamicSchemeVariant: schemeVariant,
             )
           : ColorScheme.fromSeed(
-              seedColor: Color(defaultPrimaryColor),
+              seedColor: const Color(defaultPrimaryColor),
               brightness: Brightness.dark,
               dynamicSchemeVariant: schemeVariant,
             );
@@ -393,7 +393,7 @@ extension ColorSchemesExt on ColorSchemes {
             dynamicSchemeVariant: schemeVariant,
           )
         : ColorScheme.fromSeed(
-            seedColor: Color(defaultPrimaryColor),
+            seedColor: const Color(defaultPrimaryColor),
             dynamicSchemeVariant: schemeVariant,
           );
   }

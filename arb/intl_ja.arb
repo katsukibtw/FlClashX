@@ -407,5 +407,6 @@
   "import": "インポート",
   "importFile": "ファイルからインポート",
   "importUrl": "URLからインポート",
-  "autoSetSystemDns": "オートセットシステムDNS"
+  "autoSetSystemDns": "オートセットシステムDNS",
+  "changeServer": "サーバーを変更"
 }

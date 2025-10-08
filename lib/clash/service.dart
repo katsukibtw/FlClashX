@@ -52,7 +52,7 @@ class ClashService extends ClashHandlerInterface {
         socket
             .transform(uint8ListToListIntConverter)
             .transform(utf8.decoder)
-            .transform(LineSplitter())
+            .transform(const LineSplitter())
             .listen(
           (data) {
             handleResult(

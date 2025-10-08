@@ -406,5 +406,6 @@
   "import": "Import",
   "importFile": "Import from file",
   "importUrl": "Import from URL",
-  "autoSetSystemDns": "Auto set system DNS"
+  "autoSetSystemDns": "Auto set system DNS",
+  "changeServer": "Change Server"
 }

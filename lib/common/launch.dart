@@ -35,7 +35,7 @@ class AutoLaunch {
   }
 
   updateStatus(bool isAutoLaunch) async {
-    if(kDebugMode){
+    if (kDebugMode) {
       return;
     }
     if (await isEnable == isAutoLaunch) return;

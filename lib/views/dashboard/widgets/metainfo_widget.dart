@@ -64,9 +64,11 @@ class MetainfoWidget extends ConsumerWidget {
 
     String daysLeft = '';
     if (!isPerpetual) {
-      final expireDateTime = DateTime.fromMillisecondsSinceEpoch(subscriptionInfo.expire * 1000);
+      final expireDateTime =
+          DateTime.fromMillisecondsSinceEpoch(subscriptionInfo.expire * 1000);
       final diff = expireDateTime.difference(DateTime.now()).inDays;
-      if (diff >= 0) {
+      // Only show days left if it's within 3 days
+      if (diff >= 0 && diff <= 3) {
         daysLeft = diff.toString();
       }
     }
@@ -111,18 +113,21 @@ class MetainfoWidget extends ConsumerWidget {
                           iconSize: 34,
                           color: theme.colorScheme.primary,
                           onPressed: () {
-                            globalState.appController.updateProfile(currentProfile);
+                            globalState.appController
+                                .updateProfile(currentProfile);
                           },
                         ),
                       ],
                     ),
-
                     const Spacer(),
                     if (!isUnlimitedTraffic)
                       Builder(builder: (context) {
-                        final totalTraffic = TrafficValue(value: subscriptionInfo.total);
-                        final usedTrafficValue = subscriptionInfo.upload + subscriptionInfo.download;
-                        final usedTraffic = TrafficValue(value: usedTrafficValue);
+                        final totalTraffic =
+                            TrafficValue(value: subscriptionInfo.total);
+                        final usedTrafficValue =
+                            subscriptionInfo.upload + subscriptionInfo.download;
+                        final usedTraffic =
+                            TrafficValue(value: usedTrafficValue);
 
                         double progress = 0.0;
                         if (subscriptionInfo.total > 0) {
@@ -149,8 +154,10 @@ class MetainfoWidget extends ConsumerWidget {
                               child: LinearProgressIndicator(
                                 value: progress,
                                 minHeight: 6,
-                                backgroundColor: theme.colorScheme.surfaceVariant,
-                                valueColor: AlwaysStoppedAnimation<Color>(progressColor),
+                                backgroundColor:
+                                    theme.colorScheme.surfaceContainerHighest,
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                    progressColor),
                               ),
                             ),
                           ],

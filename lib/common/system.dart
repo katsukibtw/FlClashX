@@ -30,7 +30,6 @@ class System {
     return deviceInfo.systemFeatures.contains('android.software.leanback');
   }
 
-
   Future<int> get version async {
     final deviceInfo = await DeviceInfoPlugin().deviceInfo;
     return switch (Platform.operatingSystem) {
@@ -68,6 +67,11 @@ class System {
     if (Platform.isAndroid) {
       return AuthorizeCode.error;
     }
+
+    if (Platform.isMacOS) {
+      return AuthorizeCode.none;
+    }
+
     final corePath = appPath.corePath.replaceAll(' ', '\\\\ ');
     final isAdmin = await checkIsAdmin();
     if (isAdmin) {
@@ -80,19 +84,6 @@ class System {
         return AuthorizeCode.success;
       }
       return AuthorizeCode.error;
-    }
-
-    if (Platform.isMacOS) {
-      final shell = 'chown root:admin $corePath; chmod +sx $corePath';
-      final arguments = [
-        "-e",
-        'do shell script "$shell" with administrator privileges',
-      ];
-      final result = await Process.run("osascript", arguments);
-      if (result.exitCode != 0) {
-        return AuthorizeCode.error;
-      }
-      return AuthorizeCode.success;
     } else if (Platform.isLinux) {
       final shell = Platform.environment['SHELL'] ?? 'bash';
       final password = await globalState.showCommonDialog<String>(
@@ -188,7 +179,7 @@ class System {
       if (originDns == null) {
         return;
       }
-      final needAddDns = "223.5.5.5";
+      const needAddDns = "1.1.1.1"; // Cloudflare DNS
       if (originDns.contains(needAddDns)) {
         return;
       }

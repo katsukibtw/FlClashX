@@ -15,11 +15,13 @@
 A fork of the multi-platform proxy client FlClash based on ClashMeta, simple and easy to use, open source and ad-free.
 
 on Desktop:
+
 <p style="text-align: center;">
     <img alt="desktop" src="snapshots/desktop.gif">
 </p>
 
 on Mobile:
+
 <p style="text-align: center;">
     <img alt="mobile" src="snapshots/mobile.gif">
 </p>
@@ -36,102 +38,123 @@ on Mobile:
 
 📺 Optimized controls for Android TV.
 
-+ Added a "Paste" button to the menu for adding a subscription via a link.
+- Added a "Paste" button to the menu for adding a subscription via a link.
 
-+ Added a profile selection button.
+- Added a profile selection button.
 
-+ Added the ability to transfer a profile from the mobile app via a QR code.
+- Added the ability to transfer a profile from the mobile app via a QR code.
 
 🪪 Redesigned the profile card:
 
-+ Used traffic amount with a color-changing traffic bar (not displayed if traffic is unlimited).
+- Used traffic amount with a color-changing traffic bar (not displayed if traffic is unlimited).
 
-+ Subscription expiration date (if the year is 2099, it displays "permanent subscription").
+- Subscription expiration date (if the year is 2099, it displays "permanent subscription").
 
-+ Added a new "Support" button in the profile, which pulls the supportUrl from the panel.
+- Added a new "Support" button in the profile, which pulls the supportUrl from the panel.
 
-+ The autoupdateinterval for the profile is now correctly transmitted from the panel.
+- The autoupdateinterval for the profile is now correctly transmitted from the panel.
 
 🌐 Added parsing of custom headers from the subscription page:
 
-+ flclashx-widgets: arranges widgets in the order received from the subscription.
-| Value  | Name widget |
-| :---: | ------------- |
-| `announce`  | Announce Badge  |
-| `networkSpeed`  | Network speed |
-| `outboundModeV2`  | Proxy mode (new type)  |
-| `outboundMode`  | Proxy mode (old type)  |
-| `trafficUsage`  | Traffic usage  |
-| `networkDetection`  | Determining location and IP  |
-| `tunButton`  | TUN button (Desktop only)  |
-| `vpnButton`  | VPN button (Android only)  |
-| `systemProxyButton`  | System Proxy Button (Desktop only)  |
-| `intranetIp`  | Local IP-Address |
-| `memoryInfo`  | Memory usage  |
-| `metainfo`  | Profile information  |
+- flclashx-widgets: arranges widgets in the order received from the subscription.
 
+  |        Value         | Name widget                                                 |
+  | :------------------: | ----------------------------------------------------------- |
+  |      `announce`      | Announce Badge                                              |
+  |    `networkSpeed`    | Network speed                                               |
+  |   `outboundModeV2`   | Proxy mode (new type)                                       |
+  |    `outboundMode`    | Proxy mode (old type)                                       |
+  |    `trafficUsage`    | Traffic usage                                               |
+  |  `networkDetection`  | Determining location and IP                                 |
+  |     `tunButton`      | TUN button (Desktop only)                                   |
+  |     `vpnButton`      | VPN button (Android only)                                   |
+  | `systemProxyButton`  | System Proxy Button (Desktop only)                          |
+  |     `intranetIp`     | Local IP-Address                                            |
+  |     `memoryInfo`     | Memory usage                                                |
+  |      `metainfo`      | Profile information                                         |
+  | `changeServerButton` | Change server button                                        |
+  |    `serviceInfo`     | Service information (only with header flclashx-servicename) |
 
 Usage:
+
 ```bash
     flclashx-widgets: announce,metainfo,outboundModeV2,networkDetection
 ```
-   + flclashx-view: Configures the appearance of the proxy page obtained from the subscription.
 
-| Value  | Description | Possible values |
-| :---: | ------------- | ------------- |
-| `type`  | Display mode  | `list`,`tab` |
-| `sort`  | Sorting type	  | `none`,`delay`,`name`|
-| `layout`  | Layout  | `loose`,`standard`,`tight` |
-| `icon`  | Icon style (for list display)  | `none`,`standard`,`icon` |
-| `card`  | Card size   | `expand`,`shrink`,`min` |
+- flclashx-view: Configures the appearance of the proxy page obtained from the subscription.
 
+|  Value   | Description                   | Possible values                   |
+| :------: | ----------------------------- | --------------------------------- |
+|  `type`  | Display mode                  | `list`,`tab`                      |
+|  `sort`  | Sorting type                  | `none`,`delay`,`name`             |
+| `layout` | Layout                        | `loose`,`standard`,`tight`        |
+|  `icon`  | Icon style (for list display) | `none`,`standard`,`icon`          |
+|  `card`  | Card size                     | `expand`,`shrink`,`min`,`oneline` |
 
 Usage:
+
 ```bash
     flclashx-view: type:list; sort:delay; layout:tight; icon:standard; card:shrink
 ```
 
-   + flclashx-custom: Controls the application of styles for Dashboard and ProxyView.
+- flclashx-custom: Controls the application of styles for Dashboard and ProxyView.
 
-| Value  | Description |
-| :---: | ------------- |
-| `add`  | Styles are applied only when the subscription is first added  |
-| `update`  | 	Styles are applied every time the subscription is updated |
+|  Value   | Description                                                  |
+| :------: | ------------------------------------------------------------ |
+|  `add`   | Styles are applied only when the subscription is first added |
+| `update` | Styles are applied every time the subscription is updated    |
 
 Usage:
+
 ```bash
     flclashx-custom: update
 ```
-   + flclashx-denywidgets: When set to true, editing the Dashboard page is disabled. Accepts true/false.
+
+- flclashx-denywidgets: When set to true, editing the Dashboard page is disabled. Accepts true/false.
 
 Usage:
+
 ```bash
     flclashx-denywidgets: true
+```
+
+- flclashx-servicename: The name of the service for the serviceInfo widget.
+
+Usage:
+
+```bash
+    flclashx-servicename: FlClashX
 ```
 
 ## Application Usage
 
 ### Linux
-⚠️ Before use, ensure the following dependencies are installed:
-   ```bash
-    sudo apt-get install libayatana-appindicator3-dev
-    sudo apt-get install libkeybinder-3.0-dev
-   ```
-### Android
-The following actions are supported:
-   ```bash
-    com.follow.clashx.action.START
-    
-    com.follow.clashx.action.STOP
-    
-    com.follow.clashx.action.CHANGE
-   ```
 
+⚠️ Before use, ensure the following dependencies are installed:
+
+```bash
+ sudo apt-get install libayatana-appindicator3-dev
+ sudo apt-get install libkeybinder-3.0-dev
+```
+
+### Android
+
+The following actions are supported:
+
+```bash
+ com.follow.clashx.action.START
+
+ com.follow.clashx.action.STOP
+
+ com.follow.clashx.action.CHANGE
+```
 
 ## Download
+
 <a href=""><img alt="Get it on GitHub" src="snapshots/get-it-on-github.svg" width="200px"/></a>
 
 ## Star
+
 <p style="text-align: center;">
 The easiest way to support the developers is to click the star (⭐) at the top of the page.<br>
 If you want to support with a small donation, you can <a href="">do so here.</a>

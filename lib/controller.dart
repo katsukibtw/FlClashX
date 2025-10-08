@@ -12,7 +12,6 @@ import 'package:flclashx/plugins/app.dart';
 import 'package:flclashx/providers/providers.dart';
 import 'package:flclashx/state.dart';
 import 'package:flclashx/widgets/dialog.dart';
-import 'package:flclashx/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart';
@@ -86,6 +85,8 @@ class AppController {
   }
 
   updateStatus(bool isStart) async {
+    await StatusBarManager.updateIcon(isConnected: isStart);
+
     if (isStart) {
       await globalState.handleStart([
         updateRunTime,
@@ -131,11 +132,11 @@ class AppController {
   }
 
   addProfile(Profile profile) async {
-  _ref.read(profilesProvider.notifier).setProfile(profile);
-  if (_ref.read(currentProfileIdProvider) != null) return;
-  _ref.read(currentProfileIdProvider.notifier).value = profile.id;
-  applyProfileDebounce(silence: true);
-}
+    _ref.read(profilesProvider.notifier).setProfile(profile);
+    if (_ref.read(currentProfileIdProvider) != null) return;
+    _ref.read(currentProfileIdProvider.notifier).value = profile.id;
+    applyProfileDebounce(silence: true);
+  }
 
   deleteProfile(String id) async {
     _ref.read(profilesProvider.notifier).deleteProfileById(id);
@@ -165,21 +166,23 @@ class AppController {
   }
 
   Future<void> updateProfile(Profile profile) async {
-  final prefs = await SharedPreferences.getInstance();
-  final shouldSend = prefs.getBool('sendDeviceHeaders') ?? true;
-  final newProfile = await profile.update(
-    shouldSendHeaders: shouldSend,
-  );
-  _ref.read(profilesProvider.notifier).setProfile(newProfile.copyWith(isUpdating: false));
-    
-  if (newProfile.customBehavior == 'update') {
+    final prefs = await SharedPreferences.getInstance();
+    final shouldSend = prefs.getBool('sendDeviceHeaders') ?? true;
+    final newProfile = await profile.update(
+      shouldSendHeaders: shouldSend,
+    );
+    _ref
+        .read(profilesProvider.notifier)
+        .setProfile(newProfile.copyWith(isUpdating: false));
+
+    if (newProfile.customBehavior == 'update') {
       _applyCustomViewSettings(newProfile);
     }
 
-  if (profile.id == _ref.read(currentProfileIdProvider)) {
-    applyProfileDebounce(silence: true);
+    if (profile.id == _ref.read(currentProfileIdProvider)) {
+      applyProfileDebounce(silence: true);
+    }
   }
-}
 
   setProfile(Profile profile) {
     _ref.read(profilesProvider.notifier).setProfile(profile);
@@ -466,7 +469,7 @@ class AppController {
   Future handleClear() async {
     await preferences.clearPreferences();
     commonPrint.log("clear preferences");
-    globalState.config = Config(
+    globalState.config = const Config(
       themeProps: defaultThemeProps,
     );
   }
@@ -565,10 +568,13 @@ class AppController {
     );
     autoUpdateProfiles();
     autoCheckUpdate();
-    if (!_ref.read(appSettingProvider).silentLaunch) {
-      window?.show();
-    } else {
-      window?.hide();
+    // On macOS, the app runs only in the status bar, so don't show the window
+    if (!Platform.isMacOS) {
+      if (!_ref.read(appSettingProvider).silentLaunch) {
+        window?.show();
+      } else {
+        window?.hide();
+      }
     }
     await _handlePreference();
     await _handlerDisclaimer();
@@ -674,32 +680,33 @@ class AppController {
   }
 
   addProfileFormURL(String url) async {
-  if (globalState.navigatorKey.currentState?.canPop() ?? false) {
-    globalState.navigatorKey.currentState?.popUntil((route) => route.isFirst);
-  }
-  toProfiles();
-  final commonScaffoldState = globalState.homeScaffoldKey.currentState;
-  if (commonScaffoldState?.mounted != true) return;
-
-  try {
-    final profile = await commonScaffoldState?.loadingRun<Profile>(
-      () async {
-        final prefs = await SharedPreferences.getInstance();
-        final shouldSend = prefs.getBool('sendDeviceHeaders') ?? true;
-        return await Profile.normal(url: url).update(shouldSendHeaders: shouldSend);
-      },
-      title: "${appLocalizations.add}${appLocalizations.profile}",
-    );
-
-    if (profile != null) {
-      _applyCustomViewSettings(profile);
-      await addProfile(profile);
+    if (globalState.navigatorKey.currentState?.canPop() ?? false) {
+      globalState.navigatorKey.currentState?.popUntil((route) => route.isFirst);
     }
-  } catch (err) {
-    commonPrint.log('Add Profile Failed: $err');
-    globalState.showMessage(message: TextSpan(text: err.toString()));
+    toProfiles();
+    final commonScaffoldState = globalState.homeScaffoldKey.currentState;
+    if (commonScaffoldState?.mounted != true) return;
+
+    try {
+      final profile = await commonScaffoldState?.loadingRun<Profile>(
+        () async {
+          final prefs = await SharedPreferences.getInstance();
+          final shouldSend = prefs.getBool('sendDeviceHeaders') ?? true;
+          return await Profile.normal(url: url)
+              .update(shouldSendHeaders: shouldSend);
+        },
+        title: "${appLocalizations.add}${appLocalizations.profile}",
+      );
+
+      if (profile != null) {
+        _applyCustomViewSettings(profile);
+        await addProfile(profile);
+      }
+    } catch (err) {
+      commonPrint.log('Add Profile Failed: $err');
+      globalState.showMessage(message: TextSpan(text: err.toString()));
+    }
   }
-}
 
   addProfileFormFile() async {
     final platformFile = await globalState.safeRun(picker.pickerFile);
@@ -824,58 +831,111 @@ class AppController {
   }
 
   void _applyCustomViewSettings(Profile profile) {
-  if (profile.dashboardLayout != null && profile.dashboardLayout!.isNotEmpty) {
-    final newLayout = DashboardWidgetParser.parseLayout(profile.dashboardLayout);
-    if (newLayout.isNotEmpty) {
-      _ref.read(appSettingProvider.notifier).updateState(
-            (state) => state.copyWith(dashboardWidgets: newLayout),
-          );
+    if (profile.dashboardLayout != null &&
+        profile.dashboardLayout!.isNotEmpty) {
+      final newLayout =
+          DashboardWidgetParser.parseLayout(profile.dashboardLayout);
+      if (newLayout.isNotEmpty) {
+        _ref.read(appSettingProvider.notifier).updateState(
+              (state) => state.copyWith(dashboardWidgets: newLayout),
+            );
+      }
     }
-  }
 
-  if (profile.proxiesView != null && profile.proxiesView!.isNotEmpty) {
-    final proxiesStyleNotifier = _ref.read(proxiesStyleSettingProvider.notifier);
-    proxiesStyleNotifier.updateState((currentState) {
-      var newState = currentState;
-      final settings = profile.proxiesView!.split(';');
-      for (final setting in settings) {
-        final parts = setting.split(':');
-        if (parts.length == 2) {
-          final key = parts[0].trim().toLowerCase();
-          final value = parts[1].trim().toLowerCase();
-          switch (key) {
-            case 'type':
-              if (value == 'list') newState = newState.copyWith(type: ProxiesType.list);
-              if (value == 'tab') newState = newState.copyWith(type: ProxiesType.tab);
-              break;
-            case 'sort':
-              if (value == 'none') newState = newState.copyWith(sortType: ProxiesSortType.none);
-              if (value == 'delay') newState = newState.copyWith(sortType: ProxiesSortType.delay);
-              if (value == 'name') newState = newState.copyWith(sortType: ProxiesSortType.name);
-              break;
-            case 'layout':
-              if (value == 'loose') newState = newState.copyWith(layout: ProxiesLayout.loose);
-              if (value == 'standard') newState = newState.copyWith(layout: ProxiesLayout.standard);
-              if (value == 'tight') newState = newState.copyWith(layout: ProxiesLayout.tight);
-              break;
-            case 'icon':
-              if (value == 'standard') newState = newState.copyWith(iconStyle: ProxiesIconStyle.standard);
-              if (value == 'none') newState = newState.copyWith(iconStyle: ProxiesIconStyle.none);
-              if (value == 'icon') newState = newState.copyWith(iconStyle: ProxiesIconStyle.icon);
-              break;
-            case 'card':
-              if (value == 'expand') newState = newState.copyWith(cardType: ProxyCardType.expand);
-              if (value == 'shrink') newState = newState.copyWith(cardType: ProxyCardType.shrink);
-              if (value == 'min') newState = newState.copyWith(cardType: ProxyCardType.min);
-              break;
+    if (profile.proxiesView != null && profile.proxiesView!.isNotEmpty) {
+      final proxiesStyleNotifier =
+          _ref.read(proxiesStyleSettingProvider.notifier);
+      proxiesStyleNotifier.updateState((currentState) {
+        var newState = currentState;
+        final settings = profile.proxiesView!.split(';');
+        for (final setting in settings) {
+          final parts = setting.split(':');
+          if (parts.length == 2) {
+            final key = parts[0].trim().toLowerCase();
+            final value = parts[1].trim().toLowerCase();
+            switch (key) {
+              case 'type':
+                switch (value) {
+                  case 'list':
+                    newState = newState.copyWith(type: ProxiesType.list);
+                    break;
+                  case 'tab':
+                    newState = newState.copyWith(type: ProxiesType.tab);
+                    break;
+                }
+                break;
+              case 'sort':
+                switch (value) {
+                  case 'none':
+                    newState =
+                        newState.copyWith(sortType: ProxiesSortType.none);
+                    break;
+                  case 'delay':
+                    newState =
+                        newState.copyWith(sortType: ProxiesSortType.delay);
+                    break;
+                  case 'name':
+                    newState =
+                        newState.copyWith(sortType: ProxiesSortType.name);
+                    break;
+                }
+                break;
+              case 'layout':
+                switch (value) {
+                  case 'loose':
+                    newState = newState.copyWith(layout: ProxiesLayout.loose);
+                    break;
+                  case 'standard':
+                    newState =
+                        newState.copyWith(layout: ProxiesLayout.standard);
+                    break;
+                  case 'tight':
+                    newState = newState.copyWith(layout: ProxiesLayout.tight);
+                    break;
+                }
+                break;
+              case 'icon':
+                switch (value) {
+                  case 'standard':
+                    newState =
+                        newState.copyWith(iconStyle: ProxiesIconStyle.standard);
+                    break;
+                  case 'none':
+                    newState =
+                        newState.copyWith(iconStyle: ProxiesIconStyle.none);
+                    break;
+                  case 'icon':
+                    newState =
+                        newState.copyWith(iconStyle: ProxiesIconStyle.icon);
+                    break;
+                }
+                break;
+              case 'card':
+                switch (value) {
+                  case 'expand':
+                    newState =
+                        newState.copyWith(cardType: ProxyCardType.expand);
+                    break;
+                  case 'shrink':
+                    newState =
+                        newState.copyWith(cardType: ProxyCardType.shrink);
+                    break;
+                  case 'min':
+                    newState = newState.copyWith(cardType: ProxyCardType.min);
+                    break;
+                  case 'oneline':
+                    newState =
+                        newState.copyWith(cardType: ProxyCardType.oneline);
+                    break;
+                }
+                break;
+            }
           }
         }
-      }
-      return newState;
-    });
+        return newState;
+      });
+    }
   }
-}
-
 
   Future<List<Package>> getPackages() async {
     if (_ref.read(isMobileViewProvider)) {
@@ -938,6 +998,8 @@ class AppController {
   }
 
   updateVisible() async {
+    if (Platform.isMacOS) return;
+
     final visible = await window?.isVisible;
     if (visible != null && !visible) {
       window?.show();

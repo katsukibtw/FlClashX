@@ -18,7 +18,8 @@ class Tray {
     required Brightness? brightness,
     bool force = false,
   }) async {
-    if (Platform.isAndroid) {
+    if (Platform.isAndroid || Platform.isMacOS) {
+      // Skip tray on Android and macOS (macOS uses native status bar)
       return;
     }
     if (Platform.isLinux || force) {
@@ -42,7 +43,8 @@ class Tray {
     required TrayState trayState,
     bool focus = false,
   }) async {
-    if (Platform.isAndroid) {
+    if (Platform.isAndroid || Platform.isMacOS) {
+      // Skip tray on Android and macOS (macOS uses native status bar)
       return;
     }
     if (!Platform.isLinux) {
@@ -80,41 +82,6 @@ class Tray {
       );
     }
     menuItems.add(MenuItem.separator());
-    if (Platform.isMacOS) {
-      for (final group in trayState.groups) {
-        List<MenuItem> subMenuItems = [];
-        for (final proxy in group.all) {
-          subMenuItems.add(
-            MenuItem.checkbox(
-              label: proxy.name,
-              checked: trayState.selectedMap[group.name] == proxy.name,
-              onClick: (_) {
-                final appController = globalState.appController;
-                appController.updateCurrentSelectedMap(
-                  group.name,
-                  proxy.name,
-                );
-                appController.changeProxy(
-                  groupName: group.name,
-                  proxyName: proxy.name,
-                );
-              },
-            ),
-          );
-        }
-        menuItems.add(
-          MenuItem.submenu(
-            label: group.name,
-            submenu: Menu(
-              items: subMenuItems,
-            ),
-          ),
-        );
-      }
-      if (trayState.groups.isNotEmpty) {
-        menuItems.add(MenuItem.separator());
-      }
-    }
     if (trayState.isStart) {
       menuItems.add(
         MenuItem.checkbox(

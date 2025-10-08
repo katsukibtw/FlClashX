@@ -139,7 +139,7 @@ class VpnProps with _$VpnProps {
     @Default(defaultAccessControl) AccessControl accessControl,
   }) = _VpnProps;
 
-  factory VpnProps.fromJson(Map<String, Object?> json) => 
+  factory VpnProps.fromJson(Map<String, Object?> json) =>
       _$VpnPropsFromJson(json);
 }
 

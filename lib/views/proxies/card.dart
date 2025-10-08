@@ -75,7 +75,39 @@ class ProxyCard extends StatelessWidget {
   }
 
   Widget _buildProxyNameText(BuildContext context) {
-    if (type == ProxyCardType.min) {
+    if (type == ProxyCardType.oneline) {
+      return Consumer(
+        builder: (context, ref, child) {
+          final isSelected = groupType.isComputedSelected &&
+              ref.watch(getProxyNameProvider(groupName)) == proxy.name;
+
+          return Padding(
+            padding:
+                isSelected ? const EdgeInsets.only(right: 32) : EdgeInsets.zero,
+            child: child!,
+          );
+        },
+        child: SizedBox(
+          height: measure.bodyMediumHeight * 1,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Flexible(
+                child: EmojiText(
+                  proxy.name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: context.textTheme.bodyMedium,
+                ),
+              ),
+              const SizedBox(width: 8),
+              _buildDelayText(),
+            ],
+          ),
+        ),
+      );
+    } else if (type == ProxyCardType.min) {
       return SizedBox(
         height: measure.bodyMediumHeight * 1,
         child: EmojiText(
@@ -148,44 +180,46 @@ class ProxyCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 proxyNameText,
-                const SizedBox(
-                  height: 8,
-                ),
-                if (type == ProxyCardType.expand) ...[
-                  SizedBox(
-                    height: measure.bodySmallHeight,
-                    child: _ProxyDesc(
-                      proxy: proxy,
-                    ),
-                  ),
+                if (type != ProxyCardType.oneline) ...[
                   const SizedBox(
-                    height: 6,
+                    height: 8,
                   ),
-                  delayText,
-                ] else
-                  SizedBox(
-                    height: measure.bodySmallHeight,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          flex: 1,
-                          child: TooltipText(
-                            text: Text(
-                              proxy.type,
-                              style: context.textTheme.bodySmall?.copyWith(
-                                overflow: TextOverflow.ellipsis,
-                                color: context
-                                    .textTheme.bodySmall?.color?.opacity80,
+                  if (type == ProxyCardType.expand) ...[
+                    SizedBox(
+                      height: measure.bodySmallHeight,
+                      child: _ProxyDesc(
+                        proxy: proxy,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 6,
+                    ),
+                    delayText,
+                  ] else
+                    SizedBox(
+                      height: measure.bodySmallHeight,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Flexible(
+                            flex: 1,
+                            child: TooltipText(
+                              text: Text(
+                                proxy.serverDescription ?? proxy.type,
+                                style: context.textTheme.bodySmall?.copyWith(
+                                  overflow: TextOverflow.ellipsis,
+                                  color: context
+                                      .textTheme.bodySmall?.color?.opacity80,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        delayText,
-                      ],
+                          delayText,
+                        ],
+                      ),
                     ),
-                  ),
+                ],
               ],
             ),
           ),
@@ -197,6 +231,7 @@ class ProxyCard extends StatelessWidget {
             child: _ProxyComputedMark(
               groupName: groupName,
               proxy: proxy,
+              cardType: type,
             ),
           )
       ],
@@ -229,10 +264,12 @@ class _ProxyDesc extends ConsumerWidget {
 class _ProxyComputedMark extends ConsumerWidget {
   final String groupName;
   final Proxy proxy;
+  final ProxyCardType cardType;
 
   const _ProxyComputedMark({
     required this.groupName,
     required this.proxy,
+    required this.cardType,
   });
 
   @override
@@ -241,11 +278,16 @@ class _ProxyComputedMark extends ConsumerWidget {
       getProxyNameProvider(groupName),
     );
     if (proxyName != proxy.name) {
-      return SizedBox();
+      return const SizedBox();
     }
+
+    final margin = cardType == ProxyCardType.oneline
+        ? const EdgeInsets.fromLTRB(8, 4, 8, 8)
+        : const EdgeInsets.all(8);
+
     return Container(
       alignment: Alignment.topRight,
-      margin: const EdgeInsets.all(8),
+      margin: margin,
       child: Container(
         padding: const EdgeInsets.all(4),
         decoration: BoxDecoration(

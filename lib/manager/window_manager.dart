@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flclashx/common/common.dart';
 import 'package:flclashx/enum/enum.dart';
-import 'package:flclashx/providers/app.dart';
 import 'package:flclashx/providers/config.dart';
 import 'package:flclashx/state.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +45,11 @@ class _WindowContainerState extends ConsumerState<WindowManager>
         }
       },
     );
+    // On macOS, we still need windowExtManager for quit handling, but not windowManager
     windowExtManager.addListener(this);
-    windowManager.addListener(this);
+    if (!Platform.isMacOS) {
+      windowManager.addListener(this);
+    }
   }
 
   @override
@@ -110,8 +112,10 @@ class _WindowContainerState extends ConsumerState<WindowManager>
 
   @override
   Future<void> dispose() async {
-    windowManager.removeListener(this);
     windowExtManager.removeListener(this);
+    if (!Platform.isMacOS) {
+      windowManager.removeListener(this);
+    }
     super.dispose();
   }
 }
@@ -126,12 +130,12 @@ class WindowHeaderContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (Platform.isMacOS) {
+      return child;
+    }
+
     return Consumer(
       builder: (_, ref, child) {
-        final version = ref.watch(versionProvider);
-        if (version <= 10 && Platform.isMacOS) {
-          return child!;
-        }
         return Stack(
           children: [
             Column(
@@ -168,7 +172,9 @@ class _WindowHeaderState extends State<WindowHeader> {
   @override
   void initState() {
     super.initState();
-    _initNotifier();
+    if (!Platform.isMacOS) {
+      _initNotifier();
+    }
   }
 
   _initNotifier() async {

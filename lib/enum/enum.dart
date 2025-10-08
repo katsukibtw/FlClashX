@@ -10,8 +10,6 @@ import 'package:hotkey_manager/hotkey_manager.dart';
 import 'package:flclashx/views/dashboard/widgets/announce_widget.dart';
 import 'package:flclashx/views/dashboard/widgets/metainfo_widget.dart';
 
-
-
 enum SupportPlatform {
   Windows,
   MacOS,
@@ -160,7 +158,7 @@ enum ProxiesType { tab, list }
 
 enum ProxiesLayout { loose, standard, tight }
 
-enum ProxyCardType { expand, shrink, min }
+enum ProxyCardType { expand, shrink, min, oneline }
 
 enum DnsMode {
   normal,
@@ -403,6 +401,18 @@ enum DashboardWidget {
       crossAxisCellCount: 4,
       child: MemoryInfo(),
     ),
+  ),
+  changeServerButton(
+    GridItem(
+      crossAxisCellCount: 8,
+      child: ChangeServerButton(),
+    ),
+  ),
+  serviceInfo(
+    GridItem(
+      crossAxisCellCount: 8,
+      child: ServiceInfoWidget(),
+    ),
   );
 
   final GridItem widget;
@@ -414,7 +424,7 @@ enum DashboardWidget {
   });
 
   static DashboardWidget getDashboardWidget(GridItem gridItem) {
-    final dashboardWidgets = DashboardWidget.values;
+    const dashboardWidgets = DashboardWidget.values;
     final index = dashboardWidgets.indexWhere(
       (item) => item.widget == gridItem,
     );
@@ -428,7 +438,8 @@ extension DashboardWidgetParser on DashboardWidget {
       return [];
     }
 
-    final widgetNames = layoutString.split(',').map((e) => e.trim().toLowerCase()).toList();
+    final widgetNames =
+        layoutString.split(',').map((e) => e.trim().toLowerCase()).toList();
     final List<DashboardWidget> result = [];
 
     for (final name in widgetNames) {

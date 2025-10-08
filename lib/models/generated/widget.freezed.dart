@@ -18,9 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ActivateState {
   bool get active => throw _privateConstructorUsedError;
 
-  /// Create a copy of ActivateState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ActivateStateCopyWith<ActivateState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -44,8 +42,6 @@ class _$ActivateStateCopyWithImpl<$Res, $Val extends ActivateState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ActivateState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,8 +75,6 @@ class __$$ActivateStateImplCopyWithImpl<$Res>
       _$ActivateStateImpl _value, $Res Function(_$ActivateStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ActivateState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,9 +113,7 @@ class _$ActivateStateImpl implements _ActivateState {
   @override
   int get hashCode => Object.hash(runtimeType, active);
 
-  /// Create a copy of ActivateState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivateStateImplCopyWith<_$ActivateStateImpl> get copyWith =>
@@ -134,11 +126,8 @@ abstract class _ActivateState implements ActivateState {
 
   @override
   bool get active;
-
-  /// Create a copy of ActivateState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ActivateStateImplCopyWith<_$ActivateStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -149,9 +138,7 @@ mixin _$CommonMessage {
   String get text => throw _privateConstructorUsedError;
   Duration get duration => throw _privateConstructorUsedError;
 
-  /// Create a copy of CommonMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CommonMessageCopyWith<CommonMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -175,8 +162,6 @@ class _$CommonMessageCopyWithImpl<$Res, $Val extends CommonMessage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CommonMessage
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -220,8 +205,6 @@ class __$$CommonMessageImplCopyWithImpl<$Res>
       _$CommonMessageImpl _value, $Res Function(_$CommonMessageImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CommonMessage
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -281,9 +264,7 @@ class _$CommonMessageImpl implements _CommonMessage {
   @override
   int get hashCode => Object.hash(runtimeType, id, text, duration);
 
-  /// Create a copy of CommonMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CommonMessageImplCopyWith<_$CommonMessageImpl> get copyWith =>
@@ -302,11 +283,8 @@ abstract class _CommonMessage implements CommonMessage {
   String get text;
   @override
   Duration get duration;
-
-  /// Create a copy of CommonMessage
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CommonMessageImplCopyWith<_$CommonMessageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -317,9 +295,7 @@ mixin _$AppBarState {
   AppBarSearchState? get searchState => throw _privateConstructorUsedError;
   AppBarEditState? get editState => throw _privateConstructorUsedError;
 
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AppBarStateCopyWith<AppBarState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -349,8 +325,6 @@ class _$AppBarStateCopyWithImpl<$Res, $Val extends AppBarState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -374,8 +348,6 @@ class _$AppBarStateCopyWithImpl<$Res, $Val extends AppBarState>
     ) as $Val);
   }
 
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppBarSearchStateCopyWith<$Res>? get searchState {
@@ -388,8 +360,6 @@ class _$AppBarStateCopyWithImpl<$Res, $Val extends AppBarState>
     });
   }
 
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppBarEditStateCopyWith<$Res>? get editState {
@@ -430,8 +400,6 @@ class __$$AppBarStateImplCopyWithImpl<$Res>
       _$AppBarStateImpl _value, $Res Function(_$AppBarStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -498,9 +466,7 @@ class _$AppBarStateImpl implements _AppBarState {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_actions), searchState, editState);
 
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppBarStateImplCopyWith<_$AppBarStateImpl> get copyWith =>
@@ -519,11 +485,8 @@ abstract class _AppBarState implements AppBarState {
   AppBarSearchState? get searchState;
   @override
   AppBarEditState? get editState;
-
-  /// Create a copy of AppBarState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppBarStateImplCopyWith<_$AppBarStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -533,9 +496,7 @@ mixin _$AppBarSearchState {
   dynamic Function(String) get onSearch => throw _privateConstructorUsedError;
   bool get isSearch => throw _privateConstructorUsedError;
 
-  /// Create a copy of AppBarSearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AppBarSearchStateCopyWith<AppBarSearchState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -559,8 +520,6 @@ class _$AppBarSearchStateCopyWithImpl<$Res, $Val extends AppBarSearchState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AppBarSearchState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -599,8 +558,6 @@ class __$$AppBarSearchStateImplCopyWithImpl<$Res>
       $Res Function(_$AppBarSearchStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppBarSearchState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -651,9 +608,7 @@ class _$AppBarSearchStateImpl implements _AppBarSearchState {
   @override
   int get hashCode => Object.hash(runtimeType, onSearch, isSearch);
 
-  /// Create a copy of AppBarSearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppBarSearchStateImplCopyWith<_$AppBarSearchStateImpl> get copyWith =>
@@ -670,11 +625,8 @@ abstract class _AppBarSearchState implements AppBarSearchState {
   dynamic Function(String) get onSearch;
   @override
   bool get isSearch;
-
-  /// Create a copy of AppBarSearchState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppBarSearchStateImplCopyWith<_$AppBarSearchStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -685,9 +637,7 @@ mixin _$AppBarEditState {
   bool get isEdit => throw _privateConstructorUsedError;
   dynamic Function() get onExit => throw _privateConstructorUsedError;
 
-  /// Create a copy of AppBarEditState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AppBarEditStateCopyWith<AppBarEditState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -711,8 +661,6 @@ class _$AppBarEditStateCopyWithImpl<$Res, $Val extends AppBarEditState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AppBarEditState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -756,8 +704,6 @@ class __$$AppBarEditStateImplCopyWithImpl<$Res>
       _$AppBarEditStateImpl _value, $Res Function(_$AppBarEditStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppBarEditState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -813,9 +759,7 @@ class _$AppBarEditStateImpl implements _AppBarEditState {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(editCount), isEdit, onExit);
 
-  /// Create a copy of AppBarEditState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppBarEditStateImplCopyWith<_$AppBarEditStateImpl> get copyWith =>
@@ -835,11 +779,8 @@ abstract class _AppBarEditState implements AppBarEditState {
   bool get isEdit;
   @override
   dynamic Function() get onExit;
-
-  /// Create a copy of AppBarEditState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppBarEditStateImplCopyWith<_$AppBarEditStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

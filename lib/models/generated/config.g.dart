@@ -74,6 +74,8 @@ const _$DashboardWidgetEnumMap = {
   DashboardWidget.systemProxyButton: 'systemProxyButton',
   DashboardWidget.intranetIp: 'intranetIp',
   DashboardWidget.memoryInfo: 'memoryInfo',
+  DashboardWidget.changeServerButton: 'changeServerButton',
+  DashboardWidget.serviceInfo: 'serviceInfo',
 };
 
 _$AccessControlImpl _$$AccessControlImplFromJson(Map<String, dynamic> json) =>
@@ -236,6 +238,7 @@ const _$ProxyCardTypeEnumMap = {
   ProxyCardType.expand: 'expand',
   ProxyCardType.shrink: 'shrink',
   ProxyCardType.min: 'min',
+  ProxyCardType.oneline: 'oneline',
 };
 
 _$TextScaleImpl _$$TextScaleImplFromJson(Map<String, dynamic> json) =>

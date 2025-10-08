@@ -41,12 +41,8 @@ mixin _$ProxyGroup {
   bool? get hidden => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
 
-  /// Serializes this ProxyGroup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ProxyGroup
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxyGroupCopyWith<ProxyGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -85,8 +81,6 @@ class _$ProxyGroupCopyWithImpl<$Res, $Val extends ProxyGroup>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxyGroup
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,8 +199,6 @@ class __$$ProxyGroupImplCopyWithImpl<$Res>
       _$ProxyGroupImpl _value, $Res Function(_$ProxyGroupImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxyGroup
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -400,7 +392,7 @@ class _$ProxyGroupImpl implements _ProxyGroup {
             (identical(other.icon, icon) || other.icon == icon));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -420,9 +412,7 @@ class _$ProxyGroupImpl implements _ProxyGroup {
       hidden,
       icon);
 
-  /// Create a copy of ProxyGroup
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxyGroupImplCopyWith<_$ProxyGroupImpl> get copyWith =>
@@ -493,11 +483,8 @@ abstract class _ProxyGroup implements ProxyGroup {
   bool? get hidden;
   @override
   String? get icon;
-
-  /// Create a copy of ProxyGroup
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxyGroupImplCopyWith<_$ProxyGroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -510,12 +497,8 @@ RuleProvider _$RuleProviderFromJson(Map<String, dynamic> json) {
 mixin _$RuleProvider {
   String get name => throw _privateConstructorUsedError;
 
-  /// Serializes this RuleProvider to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RuleProvider
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RuleProviderCopyWith<RuleProvider> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -539,8 +522,6 @@ class _$RuleProviderCopyWithImpl<$Res, $Val extends RuleProvider>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RuleProvider
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -574,8 +555,6 @@ class __$$RuleProviderImplCopyWithImpl<$Res>
       _$RuleProviderImpl _value, $Res Function(_$RuleProviderImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RuleProvider
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -614,13 +593,11 @@ class _$RuleProviderImpl implements _RuleProvider {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  /// Create a copy of RuleProvider
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RuleProviderImplCopyWith<_$RuleProviderImpl> get copyWith =>
@@ -643,11 +620,8 @@ abstract class _RuleProvider implements RuleProvider {
 
   @override
   String get name;
-
-  /// Create a copy of RuleProvider
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RuleProviderImplCopyWith<_$RuleProviderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -678,12 +652,8 @@ mixin _$Sniffer {
   bool get parsePureIp => throw _privateConstructorUsedError;
   Map<String, SnifferConfig> get sniff => throw _privateConstructorUsedError;
 
-  /// Serializes this Sniffer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Sniffer
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SnifferCopyWith<Sniffer> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -716,8 +686,6 @@ class _$SnifferCopyWithImpl<$Res, $Val extends Sniffer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Sniffer
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -811,8 +779,6 @@ class __$$SnifferImplCopyWithImpl<$Res>
       _$SnifferImpl _value, $Res Function(_$SnifferImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Sniffer
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1010,7 +976,7 @@ class _$SnifferImpl implements _Sniffer {
             const DeepCollectionEquality().equals(other._sniff, _sniff));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1026,9 +992,7 @@ class _$SnifferImpl implements _Sniffer {
       parsePureIp,
       const DeepCollectionEquality().hash(_sniff));
 
-  /// Create a copy of Sniffer
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SnifferImplCopyWith<_$SnifferImpl> get copyWith =>
@@ -1088,11 +1052,8 @@ abstract class _Sniffer implements Sniffer {
   bool get parsePureIp;
   @override
   Map<String, SnifferConfig> get sniff;
-
-  /// Create a copy of Sniffer
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SnifferImplCopyWith<_$SnifferImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1108,12 +1069,8 @@ mixin _$SnifferConfig {
   @JsonKey(name: "override-destination")
   bool? get overrideDest => throw _privateConstructorUsedError;
 
-  /// Serializes this SnifferConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SnifferConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SnifferConfigCopyWith<SnifferConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1139,8 +1096,6 @@ class _$SnifferConfigCopyWithImpl<$Res, $Val extends SnifferConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SnifferConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1181,8 +1136,6 @@ class __$$SnifferConfigImplCopyWithImpl<$Res>
       _$SnifferConfigImpl _value, $Res Function(_$SnifferConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SnifferConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1241,14 +1194,12 @@ class _$SnifferConfigImpl implements _SnifferConfig {
                 other.overrideDest == overrideDest));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_ports), overrideDest);
 
-  /// Create a copy of SnifferConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SnifferConfigImplCopyWith<_$SnifferConfigImpl> get copyWith =>
@@ -1277,11 +1228,8 @@ abstract class _SnifferConfig implements SnifferConfig {
   @override
   @JsonKey(name: "override-destination")
   bool? get overrideDest;
-
-  /// Create a copy of SnifferConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SnifferConfigImplCopyWith<_$SnifferConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1302,12 +1250,8 @@ mixin _$Tun {
   @JsonKey(name: "route-address")
   List<String> get routeAddress => throw _privateConstructorUsedError;
 
-  /// Serializes this Tun to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Tun
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TunCopyWith<Tun> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1334,8 +1278,6 @@ class _$TunCopyWithImpl<$Res, $Val extends Tun> implements $TunCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Tun
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1396,8 +1338,6 @@ class __$$TunImplCopyWithImpl<$Res> extends _$TunCopyWithImpl<$Res, _$TunImpl>
   __$$TunImplCopyWithImpl(_$TunImpl _value, $Res Function(_$TunImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Tun
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1506,7 +1446,7 @@ class _$TunImpl implements _Tun {
                 .equals(other._routeAddress, _routeAddress));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1517,9 +1457,7 @@ class _$TunImpl implements _Tun {
       const DeepCollectionEquality().hash(_dnsHijack),
       const DeepCollectionEquality().hash(_routeAddress));
 
-  /// Create a copy of Tun
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TunImplCopyWith<_$TunImpl> get copyWith =>
@@ -1560,11 +1498,8 @@ abstract class _Tun implements Tun {
   @override
   @JsonKey(name: "route-address")
   List<String> get routeAddress;
-
-  /// Create a copy of Tun
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TunImplCopyWith<_$TunImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1582,12 +1517,8 @@ mixin _$FallbackFilter {
   List<String> get ipcidr => throw _privateConstructorUsedError;
   List<String> get domain => throw _privateConstructorUsedError;
 
-  /// Serializes this FallbackFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of FallbackFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $FallbackFilterCopyWith<FallbackFilter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1616,8 +1547,6 @@ class _$FallbackFilterCopyWithImpl<$Res, $Val extends FallbackFilter>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of FallbackFilter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1676,8 +1605,6 @@ class __$$FallbackFilterImplCopyWithImpl<$Res>
       _$FallbackFilterImpl _value, $Res Function(_$FallbackFilterImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of FallbackFilter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1783,7 +1710,7 @@ class _$FallbackFilterImpl implements _FallbackFilter {
             const DeepCollectionEquality().equals(other._domain, _domain));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1793,9 +1720,7 @@ class _$FallbackFilterImpl implements _FallbackFilter {
       const DeepCollectionEquality().hash(_ipcidr),
       const DeepCollectionEquality().hash(_domain));
 
-  /// Create a copy of FallbackFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FallbackFilterImplCopyWith<_$FallbackFilterImpl> get copyWith =>
@@ -1832,11 +1757,8 @@ abstract class _FallbackFilter implements FallbackFilter {
   List<String> get ipcidr;
   @override
   List<String> get domain;
-
-  /// Create a copy of FallbackFilter
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FallbackFilterImplCopyWith<_$FallbackFilterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1876,12 +1798,8 @@ mixin _$Dns {
   @JsonKey(name: "fallback-filter")
   FallbackFilter get fallbackFilter => throw _privateConstructorUsedError;
 
-  /// Serializes this Dns to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Dns
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DnsCopyWith<Dns> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1921,8 +1839,6 @@ class _$DnsCopyWithImpl<$Res, $Val extends Dns> implements $DnsCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Dns
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2011,8 +1927,6 @@ class _$DnsCopyWithImpl<$Res, $Val extends Dns> implements $DnsCopyWith<$Res> {
     ) as $Val);
   }
 
-  /// Create a copy of Dns
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FallbackFilterCopyWith<$Res> get fallbackFilter {
@@ -2057,8 +1971,6 @@ class __$$DnsImplCopyWithImpl<$Res> extends _$DnsCopyWithImpl<$Res, _$DnsImpl>
   __$$DnsImplCopyWithImpl(_$DnsImpl _value, $Res Function(_$DnsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Dns
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2321,7 +2233,7 @@ class _$DnsImpl implements _Dns {
                 other.fallbackFilter == fallbackFilter));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2342,9 +2254,7 @@ class _$DnsImpl implements _Dns {
       const DeepCollectionEquality().hash(_proxyServerNameserver),
       fallbackFilter);
 
-  /// Create a copy of Dns
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DnsImplCopyWith<_$DnsImpl> get copyWith =>
@@ -2425,11 +2335,8 @@ abstract class _Dns implements Dns {
   @override
   @JsonKey(name: "fallback-filter")
   FallbackFilter get fallbackFilter;
-
-  /// Create a copy of Dns
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DnsImplCopyWith<_$DnsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2445,12 +2352,8 @@ mixin _$GeoXUrl {
   String get geoip => throw _privateConstructorUsedError;
   String get geosite => throw _privateConstructorUsedError;
 
-  /// Serializes this GeoXUrl to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GeoXUrl
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GeoXUrlCopyWith<GeoXUrl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2472,8 +2375,6 @@ class _$GeoXUrlCopyWithImpl<$Res, $Val extends GeoXUrl>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GeoXUrl
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2521,8 +2422,6 @@ class __$$GeoXUrlImplCopyWithImpl<$Res>
       _$GeoXUrlImpl _value, $Res Function(_$GeoXUrlImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GeoXUrl
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2597,13 +2496,11 @@ class _$GeoXUrlImpl implements _GeoXUrl {
             (identical(other.geosite, geosite) || other.geosite == geosite));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, mmdb, asn, geoip, geosite);
 
-  /// Create a copy of GeoXUrl
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GeoXUrlImplCopyWith<_$GeoXUrlImpl> get copyWith =>
@@ -2634,11 +2531,8 @@ abstract class _GeoXUrl implements GeoXUrl {
   String get geoip;
   @override
   String get geosite;
-
-  /// Create a copy of GeoXUrl
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GeoXUrlImplCopyWith<_$GeoXUrlImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2653,9 +2547,7 @@ mixin _$ParsedRule {
   bool get noResolve => throw _privateConstructorUsedError;
   bool get src => throw _privateConstructorUsedError;
 
-  /// Create a copy of ParsedRule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParsedRuleCopyWith<ParsedRule> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2686,8 +2578,6 @@ class _$ParsedRuleCopyWithImpl<$Res, $Val extends ParsedRule>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParsedRule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2758,8 +2648,6 @@ class __$$ParsedRuleImplCopyWithImpl<$Res>
       _$ParsedRuleImpl _value, $Res Function(_$ParsedRuleImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParsedRule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2860,9 +2748,7 @@ class _$ParsedRuleImpl implements _ParsedRule {
   int get hashCode => Object.hash(runtimeType, ruleAction, content, ruleTarget,
       ruleProvider, subRule, noResolve, src);
 
-  /// Create a copy of ParsedRule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParsedRuleImplCopyWith<_$ParsedRuleImpl> get copyWith =>
@@ -2893,11 +2779,8 @@ abstract class _ParsedRule implements ParsedRule {
   bool get noResolve;
   @override
   bool get src;
-
-  /// Create a copy of ParsedRule
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParsedRuleImplCopyWith<_$ParsedRuleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2911,12 +2794,8 @@ mixin _$Rule {
   String get id => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
-  /// Serializes this Rule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Rule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RuleCopyWith<Rule> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2938,8 +2817,6 @@ class _$RuleCopyWithImpl<$Res, $Val extends Rule>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Rule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2976,8 +2853,6 @@ class __$$RuleImplCopyWithImpl<$Res>
   __$$RuleImplCopyWithImpl(_$RuleImpl _value, $Res Function(_$RuleImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Rule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3024,13 +2899,11 @@ class _$RuleImpl implements _Rule {
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, value);
 
-  /// Create a copy of Rule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>
@@ -3054,11 +2927,8 @@ abstract class _Rule implements Rule {
   String get id;
   @override
   String get value;
-
-  /// Create a copy of Rule
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RuleImplCopyWith<_$RuleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3071,12 +2941,8 @@ SubRule _$SubRuleFromJson(Map<String, dynamic> json) {
 mixin _$SubRule {
   String get name => throw _privateConstructorUsedError;
 
-  /// Serializes this SubRule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SubRule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SubRuleCopyWith<SubRule> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3098,8 +2964,6 @@ class _$SubRuleCopyWithImpl<$Res, $Val extends SubRule>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SubRule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3132,8 +2996,6 @@ class __$$SubRuleImplCopyWithImpl<$Res>
       _$SubRuleImpl _value, $Res Function(_$SubRuleImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SubRule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3172,13 +3034,11 @@ class _$SubRuleImpl implements _SubRule {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  /// Create a copy of SubRule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SubRuleImplCopyWith<_$SubRuleImpl> get copyWith =>
@@ -3199,11 +3059,8 @@ abstract class _SubRule implements SubRule {
 
   @override
   String get name;
-
-  /// Create a copy of SubRule
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SubRuleImplCopyWith<_$SubRuleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3223,12 +3080,8 @@ mixin _$ClashConfigSnippet {
   @JsonKey(name: "sub-rules", fromJson: _genSubRules)
   List<SubRule> get subRules => throw _privateConstructorUsedError;
 
-  /// Serializes this ClashConfigSnippet to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ClashConfigSnippet
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ClashConfigSnippetCopyWith<ClashConfigSnippet> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3258,8 +3111,6 @@ class _$ClashConfigSnippetCopyWithImpl<$Res, $Val extends ClashConfigSnippet>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ClashConfigSnippet
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3314,8 +3165,6 @@ class __$$ClashConfigSnippetImplCopyWithImpl<$Res>
       $Res Function(_$ClashConfigSnippetImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ClashConfigSnippet
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3419,7 +3268,7 @@ class _$ClashConfigSnippetImpl implements _ClashConfigSnippet {
             const DeepCollectionEquality().equals(other._subRules, _subRules));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3428,9 +3277,7 @@ class _$ClashConfigSnippetImpl implements _ClashConfigSnippet {
       const DeepCollectionEquality().hash(_ruleProvider),
       const DeepCollectionEquality().hash(_subRules));
 
-  /// Create a copy of ClashConfigSnippet
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ClashConfigSnippetImplCopyWith<_$ClashConfigSnippetImpl> get copyWith =>
@@ -3469,11 +3316,8 @@ abstract class _ClashConfigSnippet implements ClashConfigSnippet {
   @override
   @JsonKey(name: "sub-rules", fromJson: _genSubRules)
   List<SubRule> get subRules;
-
-  /// Create a copy of ClashConfigSnippet
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ClashConfigSnippetImplCopyWith<_$ClashConfigSnippetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3526,12 +3370,8 @@ mixin _$ClashConfig {
       throw _privateConstructorUsedError;
   Map<String, String> get hosts => throw _privateConstructorUsedError;
 
-  /// Serializes this ClashConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ClashConfigCopyWith<ClashConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3585,8 +3425,6 @@ class _$ClashConfigCopyWithImpl<$Res, $Val extends ClashConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3705,8 +3543,6 @@ class _$ClashConfigCopyWithImpl<$Res, $Val extends ClashConfig>
     ) as $Val);
   }
 
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TunCopyWith<$Res> get tun {
@@ -3715,8 +3551,6 @@ class _$ClashConfigCopyWithImpl<$Res, $Val extends ClashConfig>
     });
   }
 
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DnsCopyWith<$Res> get dns {
@@ -3725,8 +3559,6 @@ class _$ClashConfigCopyWithImpl<$Res, $Val extends ClashConfig>
     });
   }
 
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GeoXUrlCopyWith<$Res> get geoXUrl {
@@ -3788,8 +3620,6 @@ class __$$ClashConfigImplCopyWithImpl<$Res>
       _$ClashConfigImpl _value, $Res Function(_$ClashConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4081,7 +3911,7 @@ class _$ClashConfigImpl implements _ClashConfig {
             const DeepCollectionEquality().equals(other._hosts, _hosts));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4109,9 +3939,7 @@ class _$ClashConfigImpl implements _ClashConfig {
         const DeepCollectionEquality().hash(_hosts)
       ]);
 
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ClashConfigImplCopyWith<_$ClashConfigImpl> get copyWith =>
@@ -4219,11 +4047,8 @@ abstract class _ClashConfig implements ClashConfig {
   ExternalControllerStatus get externalController;
   @override
   Map<String, String> get hosts;
-
-  /// Create a copy of ClashConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ClashConfigImplCopyWith<_$ClashConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

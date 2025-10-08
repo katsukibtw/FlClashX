@@ -53,3 +53,7 @@ app.*.map.json
 #jniLibs
 /android/app/src/main/jniLibs/
 /android/core/src/main/jniLibs/
+
+# Environment variables (contains sensitive data)
+.env
+*.local.sh

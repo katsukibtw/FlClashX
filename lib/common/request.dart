@@ -34,7 +34,7 @@ class Request {
     });
   }
 
-   Future<Response<Uint8List>> getFileResponseForUrl(
+  Future<Response<Uint8List>> getFileResponseForUrl(
     String url, {
     Map<String, dynamic>? headers,
   }) async {

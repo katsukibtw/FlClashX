@@ -78,17 +78,17 @@ class Utils {
 
   String getTimeText(int? timeStamp) {
     if (timeStamp == null) {
-      return '00:00:00';
+      return '000:00:00';
     }
     final diff = timeStamp / 1000;
     final inHours = (diff / 3600).floor();
-    if (inHours > 99) {
-      return "99:59:59";
+    if (inHours > 999) {
+      return "999:59:59";
     }
     final inMinutes = (diff / 60 % 60).floor();
     final inSeconds = (diff % 60).floor();
 
-    return "${getDateStringLast2(inHours)}:${getDateStringLast2(inMinutes)}:${getDateStringLast2(inSeconds)}";
+    return "${inHours.toString().padLeft(3, '0')}:${getDateStringLast2(inMinutes)}:${getDateStringLast2(inSeconds)}";
   }
 
   Locale? getLocaleForString(String? localString) {

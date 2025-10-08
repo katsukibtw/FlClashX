@@ -19,8 +19,6 @@ final configStateProvider = AutoDisposeProvider<Config>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ConfigStateRef = AutoDisposeProviderRef<Config>;
 String _$currentGroupsStateHash() =>
     r'6222c006e1970e7435268d32903b9019cf1a4351';
@@ -37,8 +35,6 @@ final currentGroupsStateProvider = AutoDisposeProvider<GroupsState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef CurrentGroupsStateRef = AutoDisposeProviderRef<GroupsState>;
 String _$navigationsStateHash() => r'802ae70cc8b7d7f5620b340911da89d74960bfbd';
 
@@ -55,8 +51,6 @@ final navigationsStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef NavigationsStateRef = AutoDisposeProviderRef<NavigationItemsState>;
 String _$currentNavigationsStateHash() =>
     r'0eecc0ffef6e000ae45e069d1ad79f4da4a8f082';
@@ -74,8 +68,6 @@ final currentNavigationsStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef CurrentNavigationsStateRef
     = AutoDisposeProviderRef<NavigationItemsState>;
 String _$coreStateHash() => r'33f01ee9173525862c89522bf73b3174beb63daa';
@@ -91,8 +83,6 @@ final coreStateProvider = AutoDisposeProvider<CoreState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef CoreStateRef = AutoDisposeProviderRef<CoreState>;
 String _$updateParamsHash() => r'012df72ab0e769a51c573f4692031506d7b1f1b4';
 
@@ -107,8 +97,6 @@ final updateParamsProvider = AutoDisposeProvider<UpdateParams>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef UpdateParamsRef = AutoDisposeProviderRef<UpdateParams>;
 String _$proxyStateHash() => r'22478fb593aaca11dfe2cf64472013190475a5bc';
 
@@ -123,8 +111,6 @@ final proxyStateProvider = AutoDisposeProvider<ProxyState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ProxyStateRef = AutoDisposeProviderRef<ProxyState>;
 String _$trayStateHash() => r'61c99bbae2cb7ed69dc9ee0f2149510eb6a87df4';
 
@@ -139,8 +125,6 @@ final trayStateProvider = AutoDisposeProvider<TrayState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef TrayStateRef = AutoDisposeProviderRef<TrayState>;
 String _$vpnStateHash() => r'128ddad03ce045ad1f8204e47aec3cb6cfa29f6e';
 
@@ -155,8 +139,6 @@ final vpnStateProvider = AutoDisposeProvider<VpnState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef VpnStateRef = AutoDisposeProviderRef<VpnState>;
 String _$homeStateHash() => r'2829f5d6a8548f8a97253a5437bf5c498b17c9ba';
 
@@ -171,8 +153,6 @@ final homeStateProvider = AutoDisposeProvider<HomeState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef HomeStateRef = AutoDisposeProviderRef<HomeState>;
 String _$dashboardStateHash() => r'4434206df2753d7df9eb5223c07ddead4ed170fa';
 
@@ -188,8 +168,6 @@ final dashboardStateProvider = AutoDisposeProvider<DashboardState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef DashboardStateRef = AutoDisposeProviderRef<DashboardState>;
 String _$proxiesActionsStateHash() =>
     r'84f8a94706233ff5d4b8a456291a4e66c1381c62';
@@ -207,8 +185,6 @@ final proxiesActionsStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ProxiesActionsStateRef = AutoDisposeProviderRef<ProxiesActionsState>;
 String _$startButtonSelectorStateHash() =>
     r'537aff93c98b0a689cf8cabd080c610c9c58e611';
@@ -226,8 +202,6 @@ final startButtonSelectorStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef StartButtonSelectorStateRef
     = AutoDisposeProviderRef<StartButtonSelectorState>;
 String _$profilesSelectorStateHash() =>
@@ -246,8 +220,6 @@ final profilesSelectorStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ProfilesSelectorStateRef
     = AutoDisposeProviderRef<ProfilesSelectorState>;
 String _$proxiesListSelectorStateHash() =>
@@ -266,8 +238,6 @@ final proxiesListSelectorStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ProxiesListSelectorStateRef
     = AutoDisposeProviderRef<ProxiesListSelectorState>;
 String _$proxiesSelectorStateHash() =>
@@ -286,8 +256,6 @@ final proxiesSelectorStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef ProxiesSelectorStateRef = AutoDisposeProviderRef<ProxiesSelectorState>;
 String _$groupNamesStateHash() => r'd4ba8f2fd72a0db7186ab5d96aa1548bd5a7cdcb';
 
@@ -303,8 +271,6 @@ final groupNamesStateProvider = AutoDisposeProvider<GroupNamesState>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef GroupNamesStateRef = AutoDisposeProviderRef<GroupNamesState>;
 String _$proxyGroupSelectorStateHash() =>
     r'27d42af16ed77f2d22017edbb34ab60f45566be3';
@@ -446,8 +412,6 @@ class ProxyGroupSelectorStateProvider
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin ProxyGroupSelectorStateRef
     on AutoDisposeProviderRef<ProxyGroupSelectorState> {
   /// The parameter `groupName` of this provider.
@@ -479,8 +443,6 @@ final packageListSelectorStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef PackageListSelectorStateRef
     = AutoDisposeProviderRef<PackageListSelectorState>;
 String _$moreToolsSelectorStateHash() =>
@@ -499,8 +461,6 @@ final moreToolsSelectorStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef MoreToolsSelectorStateRef
     = AutoDisposeProviderRef<MoreToolsSelectorState>;
 String _$isCurrentPageHash() => r'7c300770aef90da23109d9fcfc3bf26140d8cd08';
@@ -630,8 +590,6 @@ class IsCurrentPageProvider extends AutoDisposeProvider<bool> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin IsCurrentPageRef on AutoDisposeProviderRef<bool> {
   /// The parameter `pageLabel` of this provider.
   PageLabel get pageLabel;
@@ -766,8 +724,6 @@ class GetRealTestUrlProvider extends AutoDisposeProvider<String> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetRealTestUrlRef on AutoDisposeProviderRef<String> {
   /// The parameter `testUrl` of this provider.
   String? get testUrl;
@@ -907,8 +863,6 @@ class GetDelayProvider extends AutoDisposeProvider<int?> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetDelayRef on AutoDisposeProviderRef<int?> {
   /// The parameter `proxyName` of this provider.
   String get proxyName;
@@ -940,8 +894,6 @@ final selectedMapProvider = AutoDisposeProvider<SelectedMap>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef SelectedMapRef = AutoDisposeProviderRef<SelectedMap>;
 String _$unfoldSetHash() => r'59a5b417611533069462ddf31eca080ab2f74ac9';
 
@@ -956,8 +908,6 @@ final unfoldSetProvider = AutoDisposeProvider<Set<String>>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef UnfoldSetRef = AutoDisposeProviderRef<Set<String>>;
 String _$getHotKeyActionHash() => r'4dc74ea7ffb25624ce70c7c8214806f3ef022223';
 
@@ -1074,8 +1024,6 @@ class GetHotKeyActionProvider extends AutoDisposeProvider<HotKeyAction> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetHotKeyActionRef on AutoDisposeProviderRef<HotKeyAction> {
   /// The parameter `hotAction` of this provider.
   HotAction get hotAction;
@@ -1103,8 +1051,6 @@ final currentProfileProvider = AutoDisposeProvider<Profile?>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef CurrentProfileRef = AutoDisposeProviderRef<Profile?>;
 String _$getProxiesColumnsHash() => r'725066b5fc21f590a4c2656a1fd5e14ab7079079';
 
@@ -1120,8 +1066,6 @@ final getProxiesColumnsProvider = AutoDisposeProvider<int>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef GetProxiesColumnsRef = AutoDisposeProviderRef<int>;
 String _$getProxyCardStateHash() => r'0f131148cb5ed60c9c4c4f31fbe32f114ac346bb';
 
@@ -1238,8 +1182,6 @@ class GetProxyCardStateProvider extends AutoDisposeProvider<ProxyCardState> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetProxyCardStateRef on AutoDisposeProviderRef<ProxyCardState> {
   /// The parameter `proxyName` of this provider.
   String get proxyName;
@@ -1369,8 +1311,6 @@ class GetProxyNameProvider extends AutoDisposeProvider<String?> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetProxyNameRef on AutoDisposeProviderRef<String?> {
   /// The parameter `groupName` of this provider.
   String get groupName;
@@ -1501,8 +1441,6 @@ class GetSelectedProxyNameProvider extends AutoDisposeProvider<String?> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetSelectedProxyNameRef on AutoDisposeProviderRef<String?> {
   /// The parameter `groupName` of this provider.
   String get groupName;
@@ -1631,8 +1569,6 @@ class GetProxyDescProvider extends AutoDisposeProvider<String> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetProxyDescRef on AutoDisposeProviderRef<String> {
   /// The parameter `proxy` of this provider.
   Proxy get proxy;
@@ -1764,8 +1700,6 @@ class GetProfileOverrideDataProvider
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GetProfileOverrideDataRef on AutoDisposeProviderRef<OverrideData?> {
   /// The parameter `profileId` of this provider.
   String get profileId;
@@ -1793,8 +1727,6 @@ final layoutChangeProvider = AutoDisposeProvider<VM2?>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef LayoutChangeRef = AutoDisposeProviderRef<VM2?>;
 String _$checkIpHash() => r'07ebf8d032349e2b3adda483e68b1936ffbed68d';
 
@@ -1809,8 +1741,6 @@ final checkIpProvider = AutoDisposeProvider<VM2<int, bool>>.internal(
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef CheckIpRef = AutoDisposeProviderRef<VM2<int, bool>>;
 String _$genColorSchemeHash() => r'b18f15c938a8132ee4ed02cdfc02f3b9f01724e2';
 
@@ -1950,8 +1880,6 @@ class GenColorSchemeProvider extends AutoDisposeProvider<ColorScheme> {
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 mixin GenColorSchemeRef on AutoDisposeProviderRef<ColorScheme> {
   /// The parameter `brightness` of this provider.
   Brightness get brightness;
@@ -1989,8 +1917,6 @@ final needSetupProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef NeedSetupRef = AutoDisposeProviderRef<VM3<String?, String?, Dns?>>;
 String _$autoSetSystemDnsStateHash() =>
     r'2e0976e079100325b1ca797285df48a94c2c066c';
@@ -2008,8 +1934,6 @@ final autoSetSystemDnsStateProvider =
   allTransitiveDependencies: null,
 );
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
 typedef AutoSetSystemDnsStateRef = AutoDisposeProviderRef<VM2<bool, bool>>;
 String _$profileOverrideStateHash() =>
     r'fa26570a355ab39e27b1f93d1d2f358717065592';
@@ -2029,4 +1953,4 @@ final profileOverrideStateProvider = AutoDisposeNotifierProvider<
 
 typedef _$ProfileOverrideState = AutoDisposeNotifier<ProfileOverrideStateModel>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

@@ -444,8 +444,70 @@ class BuildCommand extends Command {
 
   _getMacosDependencies() async {
     await Build.exec(
-      Build.getExecutable("npm install -g appdmg"),
+      Build.getExecutable("npm install -g create-dmg"),
     );
+  }
+
+  _buildMacosApp({
+    required Arch arch,
+    required String env,
+  }) async {
+    await Build.exec(
+      name: "flutter build macos",
+      [
+        "flutter",
+        "build",
+        "macos",
+        "--release",
+        "--dart-define=APP_ENV=$env",
+      ],
+    );
+
+    final pubspecFile = File(join(current, "pubspec.yaml"));
+    final pubspecContent = pubspecFile.readAsStringSync();
+    final versionMatch = RegExp(r'version:\s*(.+)').firstMatch(pubspecContent);
+    final version = versionMatch?.group(1)?.split('+').first ?? "0.0.0";
+
+    final appName = Build.appName;
+    final appPath = join(current, "build", "macos", "Build", "Products",
+        "Release", "$appName.app");
+
+    final distDir = Directory(Build.distPath);
+    if (!distDir.existsSync()) {
+      distDir.createSync(recursive: true);
+    }
+
+    print("Creating DMG with create-dmg...");
+
+    await Build.exec(
+      name: "create-dmg",
+      [
+        "create-dmg",
+        "--overwrite",
+        "--dmg-title",
+        appName,
+        appPath,
+        Build.distPath,
+      ],
+    );
+
+    final createdDmgName = "$appName $version.dmg";
+    final createdDmgPath = join(Build.distPath, createdDmgName);
+    final targetDmgName = "$appName-$version-macos-${arch.name}.dmg";
+    final targetDmgPath = join(Build.distPath, targetDmgName);
+
+    final createdDmg = File(createdDmgPath);
+    if (createdDmg.existsSync()) {
+      final targetDmg = File(targetDmgPath);
+      if (targetDmg.existsSync()) {
+        targetDmg.deleteSync();
+      }
+
+      createdDmg.renameSync(targetDmgPath);
+      print("✅ DMG created: $targetDmgPath");
+    } else {
+      throw "DMG file not created: $createdDmgPath";
+    }
   }
 
   _buildDistributor({
@@ -552,10 +614,8 @@ class BuildCommand extends Command {
         return;
       case Target.macos:
         await _getMacosDependencies();
-        _buildDistributor(
-          target: target,
-          targets: "dmg",
-          args: " --description $archName",
+        await _buildMacosApp(
+          arch: arch!,
           env: env,
         );
         return;

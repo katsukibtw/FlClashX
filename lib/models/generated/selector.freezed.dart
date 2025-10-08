@@ -19,9 +19,7 @@ mixin _$VM2<A, B> {
   A get a => throw _privateConstructorUsedError;
   B get b => throw _privateConstructorUsedError;
 
-  /// Create a copy of VM2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VM2CopyWith<A, B, VM2<A, B>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -44,8 +42,6 @@ class _$VM2CopyWithImpl<A, B, $Res, $Val extends VM2<A, B>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VM2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,8 +80,6 @@ class __$$VM2ImplCopyWithImpl<A, B, $Res>
       _$VM2Impl<A, B> _value, $Res Function(_$VM2Impl<A, B>) _then)
       : super(_value, _then);
 
-  /// Create a copy of VM2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,9 +129,7 @@ class _$VM2Impl<A, B> implements _VM2<A, B> {
       const DeepCollectionEquality().hash(a),
       const DeepCollectionEquality().hash(b));
 
-  /// Create a copy of VM2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VM2ImplCopyWith<A, B, _$VM2Impl<A, B>> get copyWith =>
@@ -152,11 +144,8 @@ abstract class _VM2<A, B> implements VM2<A, B> {
   A get a;
   @override
   B get b;
-
-  /// Create a copy of VM2
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VM2ImplCopyWith<A, B, _$VM2Impl<A, B>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -167,9 +156,7 @@ mixin _$VM3<A, B, C> {
   B get b => throw _privateConstructorUsedError;
   C get c => throw _privateConstructorUsedError;
 
-  /// Create a copy of VM3
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VM3CopyWith<A, B, C, VM3<A, B, C>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -192,8 +179,6 @@ class _$VM3CopyWithImpl<A, B, C, $Res, $Val extends VM3<A, B, C>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VM3
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -237,8 +222,6 @@ class __$$VM3ImplCopyWithImpl<A, B, C, $Res>
       _$VM3Impl<A, B, C> _value, $Res Function(_$VM3Impl<A, B, C>) _then)
       : super(_value, _then);
 
-  /// Create a copy of VM3
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -297,9 +280,7 @@ class _$VM3Impl<A, B, C> implements _VM3<A, B, C> {
       const DeepCollectionEquality().hash(b),
       const DeepCollectionEquality().hash(c));
 
-  /// Create a copy of VM3
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VM3ImplCopyWith<A, B, C, _$VM3Impl<A, B, C>> get copyWith =>
@@ -318,11 +299,8 @@ abstract class _VM3<A, B, C> implements VM3<A, B, C> {
   B get b;
   @override
   C get c;
-
-  /// Create a copy of VM3
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VM3ImplCopyWith<A, B, C, _$VM3Impl<A, B, C>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -334,9 +312,7 @@ mixin _$VM4<A, B, C, D> {
   C get c => throw _privateConstructorUsedError;
   D get d => throw _privateConstructorUsedError;
 
-  /// Create a copy of VM4
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VM4CopyWith<A, B, C, D, VM4<A, B, C, D>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -360,8 +336,6 @@ class _$VM4CopyWithImpl<A, B, C, D, $Res, $Val extends VM4<A, B, C, D>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VM4
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -410,8 +384,6 @@ class __$$VM4ImplCopyWithImpl<A, B, C, D, $Res>
       _$VM4Impl<A, B, C, D> _value, $Res Function(_$VM4Impl<A, B, C, D>) _then)
       : super(_value, _then);
 
-  /// Create a copy of VM4
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -480,9 +452,7 @@ class _$VM4Impl<A, B, C, D> implements _VM4<A, B, C, D> {
       const DeepCollectionEquality().hash(c),
       const DeepCollectionEquality().hash(d));
 
-  /// Create a copy of VM4
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VM4ImplCopyWith<A, B, C, D, _$VM4Impl<A, B, C, D>> get copyWith =>
@@ -505,11 +475,8 @@ abstract class _VM4<A, B, C, D> implements VM4<A, B, C, D> {
   C get c;
   @override
   D get d;
-
-  /// Create a copy of VM4
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VM4ImplCopyWith<A, B, C, D, _$VM4Impl<A, B, C, D>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -522,9 +489,7 @@ mixin _$VM5<A, B, C, D, E> {
   D get d => throw _privateConstructorUsedError;
   E get e => throw _privateConstructorUsedError;
 
-  /// Create a copy of VM5
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VM5CopyWith<A, B, C, D, E, VM5<A, B, C, D, E>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -548,8 +513,6 @@ class _$VM5CopyWithImpl<A, B, C, D, E, $Res, $Val extends VM5<A, B, C, D, E>>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VM5
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -603,8 +566,6 @@ class __$$VM5ImplCopyWithImpl<A, B, C, D, E, $Res>
       $Res Function(_$VM5Impl<A, B, C, D, E>) _then)
       : super(_value, _then);
 
-  /// Create a copy of VM5
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -686,9 +647,7 @@ class _$VM5Impl<A, B, C, D, E> implements _VM5<A, B, C, D, E> {
       const DeepCollectionEquality().hash(d),
       const DeepCollectionEquality().hash(e));
 
-  /// Create a copy of VM5
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VM5ImplCopyWith<A, B, C, D, E, _$VM5Impl<A, B, C, D, E>> get copyWith =>
@@ -714,11 +673,8 @@ abstract class _VM5<A, B, C, D, E> implements VM5<A, B, C, D, E> {
   D get d;
   @override
   E get e;
-
-  /// Create a copy of VM5
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VM5ImplCopyWith<A, B, C, D, E, _$VM5Impl<A, B, C, D, E>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -728,9 +684,7 @@ mixin _$StartButtonSelectorState {
   bool get isInit => throw _privateConstructorUsedError;
   bool get hasProfile => throw _privateConstructorUsedError;
 
-  /// Create a copy of StartButtonSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StartButtonSelectorStateCopyWith<StartButtonSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -755,8 +709,6 @@ class _$StartButtonSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StartButtonSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -798,8 +750,6 @@ class __$$StartButtonSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$StartButtonSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StartButtonSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -848,9 +798,7 @@ class _$StartButtonSelectorStateImpl implements _StartButtonSelectorState {
   @override
   int get hashCode => Object.hash(runtimeType, isInit, hasProfile);
 
-  /// Create a copy of StartButtonSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StartButtonSelectorStateImplCopyWith<_$StartButtonSelectorStateImpl>
@@ -867,11 +815,8 @@ abstract class _StartButtonSelectorState implements StartButtonSelectorState {
   bool get isInit;
   @override
   bool get hasProfile;
-
-  /// Create a copy of StartButtonSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StartButtonSelectorStateImplCopyWith<_$StartButtonSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -882,9 +827,7 @@ mixin _$ProfilesSelectorState {
   String? get currentProfileId => throw _privateConstructorUsedError;
   int get columns => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProfilesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProfilesSelectorStateCopyWith<ProfilesSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -909,8 +852,6 @@ class _$ProfilesSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProfilesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -956,8 +897,6 @@ class __$$ProfilesSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$ProfilesSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProfilesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1027,9 +966,7 @@ class _$ProfilesSelectorStateImpl implements _ProfilesSelectorState {
       currentProfileId,
       columns);
 
-  /// Create a copy of ProfilesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProfilesSelectorStateImplCopyWith<_$ProfilesSelectorStateImpl>
@@ -1049,11 +986,8 @@ abstract class _ProfilesSelectorState implements ProfilesSelectorState {
   String? get currentProfileId;
   @override
   int get columns;
-
-  /// Create a copy of ProfilesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProfilesSelectorStateImplCopyWith<_$ProfilesSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1064,9 +998,7 @@ mixin _$NetworkDetectionState {
   bool get isTesting => throw _privateConstructorUsedError;
   IpInfo? get ipInfo => throw _privateConstructorUsedError;
 
-  /// Create a copy of NetworkDetectionState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $NetworkDetectionStateCopyWith<NetworkDetectionState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1091,8 +1023,6 @@ class _$NetworkDetectionStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of NetworkDetectionState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1138,8 +1068,6 @@ class __$$NetworkDetectionStateImplCopyWithImpl<$Res>
       $Res Function(_$NetworkDetectionStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of NetworkDetectionState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1197,9 +1125,7 @@ class _$NetworkDetectionStateImpl implements _NetworkDetectionState {
   @override
   int get hashCode => Object.hash(runtimeType, isLoading, isTesting, ipInfo);
 
-  /// Create a copy of NetworkDetectionState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NetworkDetectionStateImplCopyWith<_$NetworkDetectionStateImpl>
@@ -1219,11 +1145,8 @@ abstract class _NetworkDetectionState implements NetworkDetectionState {
   bool get isTesting;
   @override
   IpInfo? get ipInfo;
-
-  /// Create a copy of NetworkDetectionState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NetworkDetectionStateImplCopyWith<_$NetworkDetectionStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1241,9 +1164,7 @@ mixin _$TrayState {
   List<Group> get groups => throw _privateConstructorUsedError;
   Map<String, String> get selectedMap => throw _privateConstructorUsedError;
 
-  /// Create a copy of TrayState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TrayStateCopyWith<TrayState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1276,8 +1197,6 @@ class _$TrayStateCopyWithImpl<$Res, $Val extends TrayState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TrayState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1366,8 +1285,6 @@ class __$$TrayStateImplCopyWithImpl<$Res>
       _$TrayStateImpl _value, $Res Function(_$TrayStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrayState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1517,9 +1434,7 @@ class _$TrayStateImpl implements _TrayState {
       const DeepCollectionEquality().hash(_groups),
       const DeepCollectionEquality().hash(_selectedMap));
 
-  /// Create a copy of TrayState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrayStateImplCopyWith<_$TrayStateImpl> get copyWith =>
@@ -1559,11 +1474,8 @@ abstract class _TrayState implements TrayState {
   List<Group> get groups;
   @override
   Map<String, String> get selectedMap;
-
-  /// Create a copy of TrayState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrayStateImplCopyWith<_$TrayStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1576,9 +1488,7 @@ mixin _$HomeState {
   ViewMode get viewMode => throw _privateConstructorUsedError;
   String? get locale => throw _privateConstructorUsedError;
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1605,8 +1515,6 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1659,8 +1567,6 @@ class __$$HomeStateImplCopyWithImpl<$Res>
       _$HomeStateImpl _value, $Res Function(_$HomeStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1738,9 +1644,7 @@ class _$HomeStateImpl implements _HomeState {
   int get hashCode => Object.hash(runtimeType, pageLabel,
       const DeepCollectionEquality().hash(_navigationItems), viewMode, locale);
 
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
@@ -1762,11 +1666,8 @@ abstract class _HomeState implements HomeState {
   ViewMode get viewMode;
   @override
   String? get locale;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1776,9 +1677,7 @@ mixin _$ProxiesSelectorState {
   List<String> get groupNames => throw _privateConstructorUsedError;
   String? get currentGroupName => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxiesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxiesSelectorStateCopyWith<ProxiesSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1803,8 +1702,6 @@ class _$ProxiesSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxiesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1843,8 +1740,6 @@ class __$$ProxiesSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$ProxiesSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxiesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1902,9 +1797,7 @@ class _$ProxiesSelectorStateImpl implements _ProxiesSelectorState {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_groupNames), currentGroupName);
 
-  /// Create a copy of ProxiesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxiesSelectorStateImplCopyWith<_$ProxiesSelectorStateImpl>
@@ -1922,11 +1815,8 @@ abstract class _ProxiesSelectorState implements ProxiesSelectorState {
   List<String> get groupNames;
   @override
   String? get currentGroupName;
-
-  /// Create a copy of ProxiesSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxiesSelectorStateImplCopyWith<_$ProxiesSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1935,9 +1825,7 @@ abstract class _ProxiesSelectorState implements ProxiesSelectorState {
 mixin _$GroupNamesState {
   List<String> get groupNames => throw _privateConstructorUsedError;
 
-  /// Create a copy of GroupNamesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GroupNamesStateCopyWith<GroupNamesState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1961,8 +1849,6 @@ class _$GroupNamesStateCopyWithImpl<$Res, $Val extends GroupNamesState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GroupNamesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1996,8 +1882,6 @@ class __$$GroupNamesStateImplCopyWithImpl<$Res>
       _$GroupNamesStateImpl _value, $Res Function(_$GroupNamesStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GroupNamesState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2044,9 +1928,7 @@ class _$GroupNamesStateImpl implements _GroupNamesState {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_groupNames));
 
-  /// Create a copy of GroupNamesState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GroupNamesStateImplCopyWith<_$GroupNamesStateImpl> get copyWith =>
@@ -2060,11 +1942,8 @@ abstract class _GroupNamesState implements GroupNamesState {
 
   @override
   List<String> get groupNames;
-
-  /// Create a copy of GroupNamesState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GroupNamesStateImplCopyWith<_$GroupNamesStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2073,9 +1952,7 @@ abstract class _GroupNamesState implements GroupNamesState {
 mixin _$GroupsState {
   List<Group> get value => throw _privateConstructorUsedError;
 
-  /// Create a copy of GroupsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GroupsStateCopyWith<GroupsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2099,8 +1976,6 @@ class _$GroupsStateCopyWithImpl<$Res, $Val extends GroupsState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GroupsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2134,8 +2009,6 @@ class __$$GroupsStateImplCopyWithImpl<$Res>
       _$GroupsStateImpl _value, $Res Function(_$GroupsStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GroupsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2180,9 +2053,7 @@ class _$GroupsStateImpl implements _GroupsState {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
 
-  /// Create a copy of GroupsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GroupsStateImplCopyWith<_$GroupsStateImpl> get copyWith =>
@@ -2195,11 +2066,8 @@ abstract class _GroupsState implements GroupsState {
 
   @override
   List<Group> get value;
-
-  /// Create a copy of GroupsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GroupsStateImplCopyWith<_$GroupsStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2208,9 +2076,7 @@ abstract class _GroupsState implements GroupsState {
 mixin _$NavigationItemsState {
   List<NavigationItem> get value => throw _privateConstructorUsedError;
 
-  /// Create a copy of NavigationItemsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $NavigationItemsStateCopyWith<NavigationItemsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2235,8 +2101,6 @@ class _$NavigationItemsStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of NavigationItemsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2270,8 +2134,6 @@ class __$$NavigationItemsStateImplCopyWithImpl<$Res>
       $Res Function(_$NavigationItemsStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of NavigationItemsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2317,9 +2179,7 @@ class _$NavigationItemsStateImpl implements _NavigationItemsState {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
 
-  /// Create a copy of NavigationItemsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NavigationItemsStateImplCopyWith<_$NavigationItemsStateImpl>
@@ -2334,11 +2194,8 @@ abstract class _NavigationItemsState implements NavigationItemsState {
 
   @override
   List<NavigationItem> get value;
-
-  /// Create a copy of NavigationItemsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NavigationItemsStateImplCopyWith<_$NavigationItemsStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2353,9 +2210,7 @@ mixin _$ProxiesListSelectorState {
   int get columns => throw _privateConstructorUsedError;
   String get query => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxiesListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxiesListSelectorStateCopyWith<ProxiesListSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2387,8 +2242,6 @@ class _$ProxiesListSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxiesListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2462,8 +2315,6 @@ class __$$ProxiesListSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$ProxiesListSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxiesListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2583,9 +2434,7 @@ class _$ProxiesListSelectorStateImpl implements _ProxiesListSelectorState {
       columns,
       query);
 
-  /// Create a copy of ProxiesListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxiesListSelectorStateImplCopyWith<_$ProxiesListSelectorStateImpl>
@@ -2617,11 +2466,8 @@ abstract class _ProxiesListSelectorState implements ProxiesListSelectorState {
   int get columns;
   @override
   String get query;
-
-  /// Create a copy of ProxiesListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxiesListSelectorStateImplCopyWith<_$ProxiesListSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2636,9 +2482,7 @@ mixin _$ProxyGroupSelectorState {
   List<Proxy> get proxies => throw _privateConstructorUsedError;
   int get columns => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxyGroupSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxyGroupSelectorStateCopyWith<ProxyGroupSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2670,8 +2514,6 @@ class _$ProxyGroupSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxyGroupSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2745,8 +2587,6 @@ class __$$ProxyGroupSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$ProxyGroupSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxyGroupSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2858,9 +2698,7 @@ class _$ProxyGroupSelectorStateImpl implements _ProxyGroupSelectorState {
       const DeepCollectionEquality().hash(_proxies),
       columns);
 
-  /// Create a copy of ProxyGroupSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxyGroupSelectorStateImplCopyWith<_$ProxyGroupSelectorStateImpl>
@@ -2892,11 +2730,8 @@ abstract class _ProxyGroupSelectorState implements ProxyGroupSelectorState {
   List<Proxy> get proxies;
   @override
   int get columns;
-
-  /// Create a copy of ProxyGroupSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxyGroupSelectorStateImplCopyWith<_$ProxyGroupSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2906,9 +2741,7 @@ mixin _$MoreToolsSelectorState {
   List<NavigationItem> get navigationItems =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of MoreToolsSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MoreToolsSelectorStateCopyWith<MoreToolsSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2933,8 +2766,6 @@ class _$MoreToolsSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MoreToolsSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2971,8 +2802,6 @@ class __$$MoreToolsSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$MoreToolsSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MoreToolsSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3020,9 +2849,7 @@ class _$MoreToolsSelectorStateImpl implements _MoreToolsSelectorState {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_navigationItems));
 
-  /// Create a copy of MoreToolsSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MoreToolsSelectorStateImplCopyWith<_$MoreToolsSelectorStateImpl>
@@ -3037,11 +2864,8 @@ abstract class _MoreToolsSelectorState implements MoreToolsSelectorState {
 
   @override
   List<NavigationItem> get navigationItems;
-
-  /// Create a copy of MoreToolsSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MoreToolsSelectorStateImplCopyWith<_$MoreToolsSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3051,9 +2875,7 @@ mixin _$PackageListSelectorState {
   List<Package> get packages => throw _privateConstructorUsedError;
   AccessControl get accessControl => throw _privateConstructorUsedError;
 
-  /// Create a copy of PackageListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PackageListSelectorStateCopyWith<PackageListSelectorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3080,8 +2902,6 @@ class _$PackageListSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PackageListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3100,8 +2920,6 @@ class _$PackageListSelectorStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of PackageListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccessControlCopyWith<$Res> get accessControl {
@@ -3136,8 +2954,6 @@ class __$$PackageListSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$PackageListSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PackageListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3194,9 +3010,7 @@ class _$PackageListSelectorStateImpl implements _PackageListSelectorState {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_packages), accessControl);
 
-  /// Create a copy of PackageListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PackageListSelectorStateImplCopyWith<_$PackageListSelectorStateImpl>
@@ -3214,11 +3028,8 @@ abstract class _PackageListSelectorState implements PackageListSelectorState {
   List<Package> get packages;
   @override
   AccessControl get accessControl;
-
-  /// Create a copy of PackageListSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PackageListSelectorStateImplCopyWith<_$PackageListSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3228,9 +3039,7 @@ mixin _$ProxiesListHeaderSelectorState {
   double get offset => throw _privateConstructorUsedError;
   int get currentIndex => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxiesListHeaderSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxiesListHeaderSelectorStateCopyWith<ProxiesListHeaderSelectorState>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3257,8 +3066,6 @@ class _$ProxiesListHeaderSelectorStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxiesListHeaderSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3300,8 +3107,6 @@ class __$$ProxiesListHeaderSelectorStateImplCopyWithImpl<$Res>
       $Res Function(_$ProxiesListHeaderSelectorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxiesListHeaderSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3351,9 +3156,7 @@ class _$ProxiesListHeaderSelectorStateImpl
   @override
   int get hashCode => Object.hash(runtimeType, offset, currentIndex);
 
-  /// Create a copy of ProxiesListHeaderSelectorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxiesListHeaderSelectorStateImplCopyWith<
@@ -3372,11 +3175,8 @@ abstract class _ProxiesListHeaderSelectorState
   double get offset;
   @override
   int get currentIndex;
-
-  /// Create a copy of ProxiesListHeaderSelectorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxiesListHeaderSelectorStateImplCopyWith<
           _$ProxiesListHeaderSelectorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3388,9 +3188,7 @@ mixin _$ProxiesActionsState {
   ProxiesType get type => throw _privateConstructorUsedError;
   bool get hasProviders => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxiesActionsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxiesActionsStateCopyWith<ProxiesActionsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3414,8 +3212,6 @@ class _$ProxiesActionsStateCopyWithImpl<$Res, $Val extends ProxiesActionsState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxiesActionsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3459,8 +3255,6 @@ class __$$ProxiesActionsStateImplCopyWithImpl<$Res>
       $Res Function(_$ProxiesActionsStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxiesActionsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3520,9 +3314,7 @@ class _$ProxiesActionsStateImpl implements _ProxiesActionsState {
   @override
   int get hashCode => Object.hash(runtimeType, pageLabel, type, hasProviders);
 
-  /// Create a copy of ProxiesActionsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxiesActionsStateImplCopyWith<_$ProxiesActionsStateImpl> get copyWith =>
@@ -3542,11 +3334,8 @@ abstract class _ProxiesActionsState implements ProxiesActionsState {
   ProxiesType get type;
   @override
   bool get hasProviders;
-
-  /// Create a copy of ProxiesActionsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxiesActionsStateImplCopyWith<_$ProxiesActionsStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3558,9 +3347,7 @@ mixin _$ProxyState {
   List<String> get bassDomain => throw _privateConstructorUsedError;
   int get port => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxyState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxyStateCopyWith<ProxyState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3585,8 +3372,6 @@ class _$ProxyStateCopyWithImpl<$Res, $Val extends ProxyState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxyState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3636,8 +3421,6 @@ class __$$ProxyStateImplCopyWithImpl<$Res>
       _$ProxyStateImpl _value, $Res Function(_$ProxyStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxyState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3714,9 +3497,7 @@ class _$ProxyStateImpl implements _ProxyState {
   int get hashCode => Object.hash(runtimeType, isStart, systemProxy,
       const DeepCollectionEquality().hash(_bassDomain), port);
 
-  /// Create a copy of ProxyState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxyStateImplCopyWith<_$ProxyStateImpl> get copyWith =>
@@ -3738,11 +3519,8 @@ abstract class _ProxyState implements ProxyState {
   List<String> get bassDomain;
   @override
   int get port;
-
-  /// Create a copy of ProxyState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxyStateImplCopyWith<_$ProxyStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3754,9 +3532,7 @@ mixin _$ClashConfigState {
   OverrideData get overrideData => throw _privateConstructorUsedError;
   RouteMode get routeMode => throw _privateConstructorUsedError;
 
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ClashConfigStateCopyWith<ClashConfigState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3787,8 +3563,6 @@ class _$ClashConfigStateCopyWithImpl<$Res, $Val extends ClashConfigState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3817,8 +3591,6 @@ class _$ClashConfigStateCopyWithImpl<$Res, $Val extends ClashConfigState>
     ) as $Val);
   }
 
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ClashConfigCopyWith<$Res> get clashConfig {
@@ -3827,8 +3599,6 @@ class _$ClashConfigStateCopyWithImpl<$Res, $Val extends ClashConfigState>
     });
   }
 
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OverrideDataCopyWith<$Res> get overrideData {
@@ -3866,8 +3636,6 @@ class __$$ClashConfigStateImplCopyWithImpl<$Res>
       $Res Function(_$ClashConfigStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3939,9 +3707,7 @@ class _$ClashConfigStateImpl implements _ClashConfigState {
   int get hashCode => Object.hash(
       runtimeType, overrideDns, clashConfig, overrideData, routeMode);
 
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ClashConfigStateImplCopyWith<_$ClashConfigStateImpl> get copyWith =>
@@ -3964,11 +3730,8 @@ abstract class _ClashConfigState implements ClashConfigState {
   OverrideData get overrideData;
   @override
   RouteMode get routeMode;
-
-  /// Create a copy of ClashConfigState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ClashConfigStateImplCopyWith<_$ClashConfigStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3979,9 +3742,7 @@ mixin _$DashboardState {
       throw _privateConstructorUsedError;
   double get viewWidth => throw _privateConstructorUsedError;
 
-  /// Create a copy of DashboardState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DashboardStateCopyWith<DashboardState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4005,8 +3766,6 @@ class _$DashboardStateCopyWithImpl<$Res, $Val extends DashboardState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DashboardState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4045,8 +3804,6 @@ class __$$DashboardStateImplCopyWithImpl<$Res>
       _$DashboardStateImpl _value, $Res Function(_$DashboardStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DashboardState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4106,9 +3863,7 @@ class _$DashboardStateImpl implements _DashboardState {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_dashboardWidgets), viewWidth);
 
-  /// Create a copy of DashboardState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DashboardStateImplCopyWith<_$DashboardStateImpl> get copyWith =>
@@ -4125,11 +3880,8 @@ abstract class _DashboardState implements DashboardState {
   List<DashboardWidget> get dashboardWidgets;
   @override
   double get viewWidth;
-
-  /// Create a copy of DashboardState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DashboardStateImplCopyWith<_$DashboardStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4139,9 +3891,7 @@ mixin _$ProxyCardState {
   String get proxyName => throw _privateConstructorUsedError;
   String? get testUrl => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProxyCardState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProxyCardStateCopyWith<ProxyCardState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4165,8 +3915,6 @@ class _$ProxyCardStateCopyWithImpl<$Res, $Val extends ProxyCardState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProxyCardState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4205,8 +3953,6 @@ class __$$ProxyCardStateImplCopyWithImpl<$Res>
       _$ProxyCardStateImpl _value, $Res Function(_$ProxyCardStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProxyCardState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4254,9 +4000,7 @@ class _$ProxyCardStateImpl implements _ProxyCardState {
   @override
   int get hashCode => Object.hash(runtimeType, proxyName, testUrl);
 
-  /// Create a copy of ProxyCardState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProxyCardStateImplCopyWith<_$ProxyCardStateImpl> get copyWith =>
@@ -4273,11 +4017,8 @@ abstract class _ProxyCardState implements ProxyCardState {
   String get proxyName;
   @override
   String? get testUrl;
-
-  /// Create a copy of ProxyCardState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProxyCardStateImplCopyWith<_$ProxyCardStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4287,9 +4028,7 @@ mixin _$VpnState {
   TunStack get stack => throw _privateConstructorUsedError;
   VpnProps get vpnProps => throw _privateConstructorUsedError;
 
-  /// Create a copy of VpnState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VpnStateCopyWith<VpnState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4314,8 +4053,6 @@ class _$VpnStateCopyWithImpl<$Res, $Val extends VpnState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VpnState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4334,8 +4071,6 @@ class _$VpnStateCopyWithImpl<$Res, $Val extends VpnState>
     ) as $Val);
   }
 
-  /// Create a copy of VpnState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VpnPropsCopyWith<$Res> get vpnProps {
@@ -4367,8 +4102,6 @@ class __$$VpnStateImplCopyWithImpl<$Res>
       _$VpnStateImpl _value, $Res Function(_$VpnStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of VpnState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4416,9 +4149,7 @@ class _$VpnStateImpl implements _VpnState {
   @override
   int get hashCode => Object.hash(runtimeType, stack, vpnProps);
 
-  /// Create a copy of VpnState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VpnStateImplCopyWith<_$VpnStateImpl> get copyWith =>
@@ -4434,11 +4165,8 @@ abstract class _VpnState implements VpnState {
   TunStack get stack;
   @override
   VpnProps get vpnProps;
-
-  /// Create a copy of VpnState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VpnStateImplCopyWith<_$VpnStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4449,9 +4177,7 @@ mixin _$ProfileOverrideStateModel {
   Set<String> get selectedRules => throw _privateConstructorUsedError;
   OverrideData? get overrideData => throw _privateConstructorUsedError;
 
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProfileOverrideStateModelCopyWith<ProfileOverrideStateModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4482,8 +4208,6 @@ class _$ProfileOverrideStateModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4507,8 +4231,6 @@ class _$ProfileOverrideStateModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ClashConfigSnippetCopyWith<$Res>? get snippet {
@@ -4521,8 +4243,6 @@ class _$ProfileOverrideStateModelCopyWithImpl<$Res,
     });
   }
 
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OverrideDataCopyWith<$Res>? get overrideData {
@@ -4566,8 +4286,6 @@ class __$$ProfileOverrideStateModelImplCopyWithImpl<$Res>
       $Res Function(_$ProfileOverrideStateModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4635,9 +4353,7 @@ class _$ProfileOverrideStateModelImpl implements _ProfileOverrideStateModel {
   int get hashCode => Object.hash(runtimeType, snippet,
       const DeepCollectionEquality().hash(_selectedRules), overrideData);
 
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProfileOverrideStateModelImplCopyWith<_$ProfileOverrideStateModelImpl>
@@ -4657,11 +4373,8 @@ abstract class _ProfileOverrideStateModel implements ProfileOverrideStateModel {
   Set<String> get selectedRules;
   @override
   OverrideData? get overrideData;
-
-  /// Create a copy of ProfileOverrideStateModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProfileOverrideStateModelImplCopyWith<_$ProfileOverrideStateModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

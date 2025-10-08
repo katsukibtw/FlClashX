@@ -407,5 +407,6 @@
   "import": "Импорт",
   "importFile": "Импорт из файла",
   "importUrl": "Импорт по URL",
-  "autoSetSystemDns": "Автоматическая настройка системного DNS"
+  "autoSetSystemDns": "Автоматическая настройка системного DNS",
+  "changeServer": "Изменить сервер"
 }
