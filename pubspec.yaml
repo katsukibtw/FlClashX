@@ -1,7 +1,7 @@
 name: flclashx
 description: Fork multi-platform proxy client FlClash based on ClashMeta, simple and easy to use, open-source and ad-free.
 publish_to: "none"
-version: 0.2.1
+version: 0.3.0
 
 environment:
   sdk: ">=3.1.0 <4.0.0"
@@ -31,6 +31,7 @@ dependencies:
   qr_flutter: ^4.1.0
   shelf: ^1.4.1
   shelf_router: ^1.1.4
+  http: ^1.5.0
   network_info_plus: ^5.0.3
   collection: ^1.18.0
   animations: ^2.0.11

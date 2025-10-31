@@ -527,13 +527,13 @@ String? getSelectedProxyName(Ref ref, String groupName) {
 String getProxyDesc(Ref ref, Proxy proxy) {
   final groupTypeNamesList = GroupType.values.map((e) => e.name).toList();
   if (!groupTypeNamesList.contains(proxy.type)) {
-    return proxy.type;
+    return proxy.serverDescription ?? proxy.type;
   } else {
     final groups = ref.watch(groupsProvider);
     final index = groups.indexWhere((element) => element.name == proxy.name);
-    if (index == -1) return proxy.type;
+    if (index == -1) return proxy.serverDescription ?? proxy.type;
     final state = ref.watch(getProxyCardStateProvider(proxy.name));
-    return "${proxy.type}(${state.proxyName.isNotEmpty ? state.proxyName : '*'})";
+    return "${proxy.serverDescription ?? proxy.type}(${state.proxyName.isNotEmpty ? state.proxyName : '*'})";
   }
 }
 

@@ -17,8 +17,16 @@ WizardStyle=modern
 PrivilegesRequired={{PRIVILEGES_REQUIRED}}
 ArchitecturesAllowed={{ARCH}}
 ArchitecturesInstallIn64BitMode={{ARCH}}
+UninstallDisplayIcon={uninstallexe}
+ChangesAssociations=yes
 
 [Code]
+const
+  SHCNE_ASSOCCHANGED = $08000000;
+  SHCNF_IDLIST = $0000;
+
+procedure SHChangeNotify(wEventId: Integer; uFlags: Integer; dwItem1: Integer; dwItem2: Integer); external 'SHChangeNotify@shell32.dll stdcall';
+
 procedure KillProcesses;
 var
   Processes: TArrayOfString;
@@ -39,6 +47,41 @@ begin
   Result := True;
 end;
 
+procedure CurStepChanged(CurStep: TSetupStep);
+begin
+  if CurStep = ssPostInstall then
+  begin
+    SHChangeNotify(SHCNE_ASSOCCHANGED, SHCNF_IDLIST, 0, 0);
+    Sleep(1000); // Give Windows time to process the changes
+  end;
+end;
+
+procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+var
+  ResultCode: Integer;
+begin
+  case CurUninstallStep of
+    usUninstall:
+    begin
+      KillProcesses;
+      
+      Exec('sc.exe', 'stop "FlClashHelperService"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+      Sleep(2000);
+      Exec('sc.exe', 'delete "FlClashHelperService"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+    end;
+    
+    usPostUninstall:
+    begin
+      if DirExists(ExpandConstant('{userappdata}\com.follow\clashx')) then
+      begin
+        if MsgBox('Удалить пользовательские данные программы?', mbConfirmation, MB_YESNO) = IDYES then
+        begin
+          DelTree(ExpandConstant('{userappdata}\com.follow\clashx'), True, True, True);
+        end;
+      end;
+    end;
+  end;
+end;
 [Languages]
 {% for locale in LOCALES %}
 {% if locale.lang == 'en' %}Name: "english"; MessagesFile: "compiler:Default.isl"{% endif %}

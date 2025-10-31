@@ -35,6 +35,7 @@ class GlobalState {
   late AppState appState;
   bool isPre = true;
   String? coreSHA256;
+  String? coreVersion;
   late PackageInfo packageInfo;
   Function? updateCurrentDelayDebounce;
   late Measure measure;
@@ -66,6 +67,7 @@ class GlobalState {
 
   initApp(int version) async {
     coreSHA256 = const String.fromEnvironment("CORE_SHA256");
+    coreVersion = const String.fromEnvironment("CORE_VERSION");
     isPre = const String.fromEnvironment("APP_ENV") != 'stable';
     appState = AppState(
       version: version,
@@ -83,14 +85,14 @@ class GlobalState {
     try {
       corePalette = await DynamicColorPlugin.getCorePalette();
       accentColor = await DynamicColorPlugin.getAccentColor() ??
-          Color(defaultPrimaryColor);
+          const Color(defaultPrimaryColor);
     } catch (_) {}
   }
 
   init() async {
     packageInfo = await PackageInfo.fromPlatform();
     config = await preferences.getConfig() ??
-        Config(
+        const Config(
           themeProps: defaultThemeProps,
         );
     await globalState.migrateOldData(config);
@@ -501,7 +503,7 @@ class DetectionState {
     debouncer.call(
       FunctionTag.checkIp,
       _checkIp,
-      duration: Duration(
+      duration: const Duration(
         milliseconds: 1200,
       ),
     );
