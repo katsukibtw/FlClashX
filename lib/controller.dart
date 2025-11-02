@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:typed_data';
-
+import 'package:http/http.dart' as http;
 import 'package:archive/archive.dart';
 import 'package:flclashx/clash/clash.dart';
 import 'package:flclashx/common/archive.dart';
@@ -14,7 +14,7 @@ import 'package:flclashx/state.dart';
 import 'package:flclashx/widgets/dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:path/path.dart';
+import 'package:path/path.dart' hide windows;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,7 +24,7 @@ import 'views/profiles/override_profile.dart';
 
 class AppController {
   int? lastProfileModified;
-
+  Timer? _profileUpdateTimer;
   final BuildContext context;
   final WidgetRef _ref;
 
@@ -394,6 +394,9 @@ class AppController {
         },
         retryIf: (res) => res.isEmpty,
       );
+
+      _ref.read(versionProvider.notifier).value =
+          _ref.read(versionProvider) + 1;
     } catch (_) {
       _ref.read(groupsProvider.notifier).value = [];
     }
@@ -452,6 +455,7 @@ class AppController {
   }
 
   handleExit() async {
+    _profileUpdateTimer?.cancel();
     Future.delayed(commonDuration, () {
       system.exit();
     });
@@ -461,6 +465,10 @@ class AppController {
       await proxy?.stopProxy();
       await clashCore.shutdown();
       await clashService?.destroy();
+      try {
+        final url = Uri.parse('http://127.0.0.1:47890/shutdown');
+        await http.post(url).timeout(const Duration(seconds: 1));
+      } catch (e) {}
     } finally {
       system.exit();
     }
@@ -568,7 +576,6 @@ class AppController {
     );
     autoUpdateProfiles();
     autoCheckUpdate();
-    // On macOS, the app runs only in the status bar, so don't show the window
     if (!Platform.isMacOS) {
       if (!_ref.read(appSettingProvider).silentLaunch) {
         window?.show();

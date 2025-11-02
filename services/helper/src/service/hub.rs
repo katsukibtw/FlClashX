@@ -87,6 +87,11 @@ fn stop() -> impl Reply {
     "".to_string()
 }
 
+fn shutdown_service() -> impl Reply {
+    std::process::exit(0);
+    "Service is shutting down".to_string()
+}
+
 fn log_message(message: String) {
     let mut log_buffer = LOGS.lock().unwrap();
     if log_buffer.len() == 100 {
@@ -117,7 +122,9 @@ pub async fn run_service() -> anyhow::Result<()> {
 
     let api_logs = warp::get().and(warp::path("logs")).map(|| get_logs());
 
-    warp::serve(api_ping.or(api_start).or(api_stop).or(api_logs))
+    let api_shutdown = warp::post().and(warp::path("shutdown")).map(|| shutdown_service());
+
+    warp::serve(api_ping.or(api_start).or(api_stop).or(api_logs).or(api_shutdown))
         .run(([127, 0, 0, 1], LISTEN_PORT))
         .await;
 

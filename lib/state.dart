@@ -321,9 +321,13 @@ class GlobalState {
       tun: patchConfig.tun.getRealTun(config.networkProps.routeMode),
     );
     rawConfig["external-controller"] = realPatchConfig.externalController.value;
-    rawConfig["external-ui"] = "";
+    if (rawConfig["external-ui"] == null || rawConfig["external-ui"] == "") {
+      rawConfig["external-ui"] = "";
+    }
     rawConfig["interface-name"] = "";
-    rawConfig["external-ui-url"] = "";
+    if (rawConfig["external-ui-url"] == null || rawConfig["external-ui-url"] == "") {
+      rawConfig["external-ui-url"] = "";
+    }
     rawConfig["tcp-concurrent"] = realPatchConfig.tcpConcurrent;
     rawConfig["unified-delay"] = realPatchConfig.unifiedDelay;
     rawConfig["ipv6"] = realPatchConfig.ipv6;
