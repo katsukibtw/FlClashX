@@ -300,6 +300,10 @@ jobs:
       - name: Patch release.md
         run: |
           version=$(echo "${{ github.ref_name }}" | sed 's/^v//')
+          if [ "${{ env.IS_STABLE }}" != "true" ]; then
+            echo "⚠️ **This is a pre-release version for testing purposes.**" >> release.md
+            echo "" >> release.md
+          fi
           sed "s|VERSION|$version|g" ./.github/release_template.md >> release.md
 
       - name: Generate sha256
@@ -310,9 +314,18 @@ jobs:
             sha256sum "$file" > "${file}.sha256"
           done
 
-      - name: Release
+      - name: Release (Stable)
         if: ${{ env.IS_STABLE == 'true' }}
         uses: softprops/action-gh-release@v2
         with:
           files: ./dist/*
           body_path: "./release.md"
+          prerelease: false
+
+      - name: Release (Pre-release)
+        if: ${{ env.IS_STABLE != 'true' }}
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./dist/*
+          body_path: "./release.md"
+          prerelease: true
