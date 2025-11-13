@@ -231,9 +231,8 @@ enum HotAction {
 }
 
 enum ProxiesIconStyle {
-  standard,
-  none,
   icon,
+  none,
 }
 
 enum FontFamily {

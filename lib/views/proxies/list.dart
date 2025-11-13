@@ -287,35 +287,6 @@ class _ProxyGroupCardState extends State<ProxyGroupCard> with AutomaticKeepAlive
           return this.icon;
         }));
         return switch (iconStyle) {
-          ProxiesIconStyle.standard => LayoutBuilder(
-              builder: (_, constraints) {
-                return Container(
-                  margin: const EdgeInsets.only(
-                    right: 16,
-                  ),
-                  child: AspectRatio(
-                    aspectRatio: 1,
-                    child: Container(
-                      height: 46,
-                      width: 46,
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.all(6.ap),
-                      decoration: ShapeDecoration(
-                        shape: RoundedSuperellipseBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        color: context.colorScheme.secondaryContainer,
-                      ),
-                      clipBehavior: Clip.antiAlias,
-                      child: CommonTargetIcon(
-                        src: icon,
-                        size: 46 - 12.ap,
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
           ProxiesIconStyle.icon => Container(
               margin: const EdgeInsets.only(
                 right: 16,

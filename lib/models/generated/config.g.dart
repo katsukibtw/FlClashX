@@ -195,7 +195,7 @@ _$ProxiesStyleImpl _$$ProxiesStyleImplFromJson(Map<String, dynamic> json) =>
           ProxiesLayout.standard,
       iconStyle:
           $enumDecodeNullable(_$ProxiesIconStyleEnumMap, json['iconStyle']) ??
-              ProxiesIconStyle.standard,
+              ProxiesIconStyle.icon,
       cardType: $enumDecodeNullable(_$ProxyCardTypeEnumMap, json['cardType']) ??
           ProxyCardType.expand,
       iconMap: (json['iconMap'] as Map<String, dynamic>?)?.map(
@@ -232,7 +232,6 @@ const _$ProxiesLayoutEnumMap = {
 };
 
 const _$ProxiesIconStyleEnumMap = {
-  ProxiesIconStyle.standard: 'standard',
   ProxiesIconStyle.none: 'none',
   ProxiesIconStyle.icon: 'icon',
 };

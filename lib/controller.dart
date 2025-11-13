@@ -1205,16 +1205,13 @@ class AppController {
               case 'icon':
                 switch (value) {
                   case 'standard':
+                  case 'icon':
                     newState =
-                        newState.copyWith(iconStyle: ProxiesIconStyle.standard);
+                        newState.copyWith(iconStyle: ProxiesIconStyle.icon);
                     break;
                   case 'none':
                     newState =
                         newState.copyWith(iconStyle: ProxiesIconStyle.none);
-                    break;
-                  case 'icon':
-                    newState =
-                        newState.copyWith(iconStyle: ProxiesIconStyle.icon);
                     break;
                 }
                 break;
